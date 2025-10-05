@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Calendar, Clock, Users, Phone, Mail, MapPin, CheckCircle } from 'lucide-react'
 import './reservation.css'
 
-export default function ReservationSection({ onMenuClick }) {
+export default function ReservationSection() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -151,13 +151,6 @@ export default function ReservationSection({ onMenuClick }) {
                 <li>Special requests subject to availability</li>
                 <li>Contact us for events larger than 8 people</li>
               </ul>
-            </div>
-
-            {/* View Full Menu Button */}
-            <div className="view-menu-container">
-              <button className="view-menu-btn" onClick={onMenuClick}>
-                View Full Menu
-              </button>
             </div>
           </div>
 

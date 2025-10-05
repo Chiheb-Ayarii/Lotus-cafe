@@ -10,12 +10,17 @@ const Nav = ({ onNavigate }) => {
     { name: 'Galerie', page: 'gallery' },
     { name: 'Menu', page: 'menu' },
     { name: 'Contact', page: 'contact' },
-    // Add more if needed
   ];
 
+  const scrollToTop = (smooth = true) => {
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
+    }
+  };
+
   const handleLogoClick = () => {
-    // Navigate to home page - you can use your router here
     onNavigate('home');
+    scrollToTop();
   };
 
   const toggleMenu = () => {
@@ -28,7 +33,7 @@ const Nav = ({ onNavigate }) => {
         {/* Logo */}
         <div className="logo" onClick={handleLogoClick}>
           <img 
-            src="/public/LOTUS LOGO.jpg" // Replace with your logo path
+            src="/public/LOTUS LOGO.jpg"
             alt="Logo" 
             className="logo-image"
           />
@@ -41,8 +46,9 @@ const Nav = ({ onNavigate }) => {
               <button
                 className="nav-link"
                 onClick={() => {
-                  onNavigate(item.page)
-                  setIsMenuOpen(false)
+                  onNavigate(item.page);
+                  setIsMenuOpen(false);
+                  scrollToTop();
                 }}
                 style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
               >

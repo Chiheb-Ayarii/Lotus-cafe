@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Calendar, Clock, Users, Phone, Mail, MapPin, CheckCircle } from 'lucide-react'
+import { Calendar, Clock, Users, Phone, Mail, MapPin, CheckCircle, MessageCircle } from 'lucide-react'
 import './reservation.css'
 
 export default function ReservationSection() {
@@ -24,29 +24,80 @@ export default function ReservationSection() {
     })
   }
 
-  const handleSubmit = async (e) => {
+  const handleWhatsAppReservation = (e) => {
     e.preventDefault()
+    
+    if (!validateForm()) return
+    
     setIsSubmitting(true)
     
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500))
+    const message = `Hello! I would like to make a reservation at Lotus Coffee House:
     
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Date: ${formData.date}
+Time: ${formData.time}
+Number of Guests: ${formData.guests}
+${formData.specialRequests ? `Special Requests: ${formData.specialRequests}` : ''}
+
+Please confirm my reservation. Thank you!`
+
+    const encodedMessage = encodeURIComponent(message)
+    const whatsappUrl = `https://wa.me/15551234567?text=${encodedMessage}`
     
-    // Reset form after 5 seconds
+    // Simulate processing delay
     setTimeout(() => {
-      setIsSubmitted(false)
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        date: '',
-        time: '',
-        guests: '2',
-        specialRequests: ''
-      })
-    }, 5000)
+      setIsSubmitting(false)
+      window.open(whatsappUrl, '_blank')
+    }, 1000)
+  }
+
+  const handleEmailReservation = (e) => {
+    e.preventDefault()
+    
+    if (!validateForm()) return
+    
+    setIsSubmitting(true)
+    
+    const subject = `Reservation Request - ${formData.name}`
+    const body = `Dear Lotus Coffee House,
+
+I would like to make a reservation with the following details:
+
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Date: ${formData.date}
+Time: ${formData.time}
+Number of Guests: ${formData.guests}
+${formData.specialRequests ? `Special Requests: ${formData.specialRequests}` : ''}
+
+Please confirm my reservation at your earliest convenience.
+
+Thank you,
+${formData.name}`
+
+    const encodedSubject = encodeURIComponent(subject)
+    const encodedBody = encodeURIComponent(body)
+    const mailtoUrl = `mailto:founder@lotuscoffee.com?subject=${encodedSubject}&body=${encodedBody}`
+    
+    // Simulate processing delay
+    setTimeout(() => {
+      setIsSubmitting(false)
+      window.location.href = mailtoUrl
+    }, 1000)
+  }
+
+  const validateForm = () => {
+    const requiredFields = ['name', 'email', 'date', 'time']
+    for (const field of requiredFields) {
+      if (!formData[field]) {
+        alert(`Please fill in the ${field} field`)
+        return false
+      }
+    }
+    return true
   }
 
   const timeSlots = [
@@ -164,7 +215,7 @@ export default function ReservationSection() {
                 <p className="success-note">We've sent a confirmation to {formData.email}</p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="reservation-form">
+              <form className="reservation-form">
                 <div className="form-row">
                   <div className="form-group">
                     <label htmlFor="name" className="form-label">
@@ -291,20 +342,45 @@ export default function ReservationSection() {
                   />
                 </div>
 
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className={`submit-button ${isSubmitting ? 'submitting' : ''}`}
-                >
-                  {isSubmitting ? (
-                    <>
-                      <div className="spinner"></div>
-                      Processing...
-                    </>
-                  ) : (
-                    'Reserve Table'
-                  )}
-                </button>
+                <div className="reservation-buttons">
+                  <button
+                    type="button"
+                    onClick={handleWhatsAppReservation}
+                    disabled={isSubmitting}
+                    className={`whatsapp-button ${isSubmitting ? 'submitting' : ''}`}
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <div className="spinner"></div>
+                        Processing...
+                      </>
+                    ) : (
+                      <>
+                        <MessageCircle className="button-icon" />
+                        Reserve via WhatsApp
+                      </>
+                    )}
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={handleEmailReservation}
+                    disabled={isSubmitting}
+                    className={`email-button ${isSubmitting ? 'submitting' : ''}`}
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <div className="spinner"></div>
+                        Processing...
+                      </>
+                    ) : (
+                      <>
+                        <Mail className="button-icon" />
+                        Reserve via Email
+                      </>
+                    )}
+                  </button>
+                </div>
 
                 <p className="form-note">
                   * Required fields. We'll contact you to confirm your reservation.

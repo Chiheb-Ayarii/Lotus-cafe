@@ -22,7 +22,7 @@ export function AboutSection() {
             <div className="divider-line"></div>
           </div>
           <h2 className="section-title">About Lotus Coffee</h2>
-          <p className="section-description">
+          <p className="section-description-text">
             Lotus Coffee House combines artisan coffee expertise with a serene atmosphere,
             offering premium blends and exceptional service for an unforgettable experience.
           </p>

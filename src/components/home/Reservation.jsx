@@ -16,12 +16,62 @@ export default function ReservationSection() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [errors, setErrors] = useState({
+    name: '',
+    email: '',
+    date: '',
+    time: ''
+  })
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     })
+    // Clear error when user starts typing
+    if (errors[e.target.name]) {
+      setErrors({
+        ...errors,
+        [e.target.name]: ""
+      })
+    }
+  }
+
+  const validateForm = () => {
+    const newErrors = {
+      name: '',
+      email: '',
+      date: '',
+      time: ''
+    }
+
+    let isValid = true
+
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required"
+      isValid = false
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required"
+      isValid = false
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Email is invalid"
+      isValid = false
+    }
+
+    if (!formData.date) {
+      newErrors.date = "Date is required"
+      isValid = false
+    }
+
+    if (!formData.time) {
+      newErrors.time = "Time is required"
+      isValid = false
+    }
+
+    setErrors(newErrors)
+    return isValid
   }
 
   const handleWhatsAppReservation = (e) => {
@@ -89,15 +139,12 @@ ${formData.name}`
     }, 1000)
   }
 
-  const validateForm = () => {
-    const requiredFields = ['name', 'email', 'date', 'time']
-    for (const field of requiredFields) {
-      if (!formData[field]) {
-        alert(`Please fill in the ${field} field`)
-        return false
-      }
-    }
-    return true
+  // Check if all required fields are filled
+  const areRequiredFieldsFilled = () => {
+    return formData.name.trim() && 
+           formData.email.trim() && 
+           formData.date && 
+           formData.time
   }
 
   const timeSlots = [
@@ -227,10 +274,10 @@ ${formData.name}`
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      required
-                      className="form-input"
+                      className={`form-input ${errors.name ? 'error' : ''}`}
                       placeholder="Enter your full name"
                     />
+                    {errors.name && <span className="error-message">{errors.name}</span>}
                   </div>
                 </div>
 
@@ -245,10 +292,10 @@ ${formData.name}`
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      required
-                      className="form-input"
+                      className={`form-input ${errors.email ? 'error' : ''}`}
                       placeholder="your@email.com"
                     />
+                    {errors.email && <span className="error-message">{errors.email}</span>}
                   </div>
                   <div className="form-group">
                     <label htmlFor="phone" className="form-label">
@@ -278,10 +325,10 @@ ${formData.name}`
                       name="date"
                       value={formData.date}
                       onChange={handleChange}
-                      required
-                      className="form-input"
+                      className={`form-input ${errors.date ? 'error' : ''}`}
                       min={new Date().toISOString().split('T')[0]}
                     />
+                    {errors.date && <span className="error-message">{errors.date}</span>}
                   </div>
                   <div className="form-group">
                     <label htmlFor="time" className="form-label">
@@ -293,8 +340,7 @@ ${formData.name}`
                       name="time"
                       value={formData.time}
                       onChange={handleChange}
-                      required
-                      className="form-input"
+                      className={`form-input ${errors.time ? 'error' : ''}`}
                     >
                       <option value="">Select time</option>
                       {timeSlots.map(time => (
@@ -303,6 +349,7 @@ ${formData.name}`
                         </option>
                       ))}
                     </select>
+                    {errors.time && <span className="error-message">{errors.time}</span>}
                   </div>
                 </div>
 
@@ -346,8 +393,8 @@ ${formData.name}`
                   <button
                     type="button"
                     onClick={handleWhatsAppReservation}
-                    disabled={isSubmitting}
-                    className={`submit-btn whatsapp-btn ${isSubmitting ? 'submitting' : ''}`}
+                    disabled={isSubmitting || !areRequiredFieldsFilled()}
+                    className={`whatsapp-btn ${isSubmitting ? 'submitting' : ''}`}
                   >
                     {isSubmitting ? (
                       <>
@@ -356,8 +403,8 @@ ${formData.name}`
                       </>
                     ) : (
                       <>
-                        <span>Reserve via WhatsApp</span>
                         <MessageCircle className="button-icon" />
+                        Reserve via WhatsApp
                       </>
                     )}
                   </button>
@@ -365,8 +412,8 @@ ${formData.name}`
                   <button
                     type="button"
                     onClick={handleEmailReservation}
-                    disabled={isSubmitting}
-                    className={`submit-btn email-btn ${isSubmitting ? 'submitting' : ''}`}
+                    disabled={isSubmitting || !areRequiredFieldsFilled()}
+                    className={`email-btn ${isSubmitting ? 'submitting' : ''}`}
                   >
                     {isSubmitting ? (
                       <>

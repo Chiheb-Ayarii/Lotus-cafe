@@ -498,3 +498,101 @@
     justify-content: center;
     gap: 10px;
 }
+/* Add to reservation.css */
+
+.reservation-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .reservation-buttons {
+    flex-direction: row;
+  }
+}
+
+.whatsapp-btn, .email-btn {
+  flex: 1;
+  background: transparent;
+  border: 1px solid #7a9b76;
+  color: #7a9b76;
+  padding: 15px 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 8px;
+}
+
+.whatsapp-btn:hover:not(:disabled) {
+  background: #6b8f67;
+  color: #f5f5dc;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(107, 143, 103, 0.3);
+}
+
+.email-btn:hover:not(:disabled) {
+  background: #7a9b76;
+  color: #f5f5dc;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(122, 155, 118, 0.3);
+}
+
+.whatsapp-btn:disabled, .email-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.whatsapp-btn:disabled:hover, .email-btn:disabled:hover {
+  background: transparent;
+  color: #7a9b76;
+  box-shadow: none;
+  transform: none !important;
+}
+
+.button-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Error states */
+.form-input.error {
+  border-color: #e74c3c;
+  box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.1);
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Keep the existing spinner styles */
+.submitting {
+  position: relative;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

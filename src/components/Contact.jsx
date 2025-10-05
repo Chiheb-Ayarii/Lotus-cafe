@@ -3,8 +3,13 @@
 import { useState, useEffect, useRef } from "react"
 import "./contact.css"
 import { Mail, MessageCircle } from 'lucide-react'
+
 export default function LotusContact() {
   const [formData, setFormData] = useState({
+    name: "",
+    message: "",
+  })
+  const [errors, setErrors] = useState({
     name: "",
     message: "",
   })
@@ -31,6 +36,13 @@ export default function LotusContact() {
       ...formData,
       [e.target.name]: e.target.value,
     })
+    // Clear error when user starts typing
+    if (errors[e.target.name]) {
+      setErrors({
+        ...errors,
+        [e.target.name]: "",
+      })
+    }
   }
 
   // 🔍 Get phone and email dynamically from the contact info section
@@ -47,9 +59,37 @@ export default function LotusContact() {
     return { phoneNumber, email }
   }
 
+  // ✅ Validate form fields
+  const validateForm = () => {
+    const newErrors = {
+      name: "",
+      message: "",
+    }
+
+    let isValid = true
+
+    if (!formData.name.trim()) {
+      newErrors.name = "Le nom est requis"
+      isValid = false
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = "Le message est requis"
+      isValid = false
+    }
+
+    setErrors(newErrors)
+    return isValid
+  }
+
   // 📱 Send via WhatsApp
   const handleWhatsAppSubmit = (e) => {
     e.preventDefault()
+    
+    if (!validateForm()) {
+      return
+    }
+
     const { phoneNumber } = getContactInfo()
     const namePart = formData.name ? `Nom: ${formData.name}\n\n` : ""
     const message = `${namePart}Message:\n${formData.message}`
@@ -61,6 +101,11 @@ export default function LotusContact() {
   // 📧 Always open Gmail compose (works on all devices)
   const handleEmailSubmit = (e) => {
     e.preventDefault()
+    
+    if (!validateForm()) {
+      return
+    }
+
     const { email } = getContactInfo()
     const subject = encodeURIComponent(`Message de ${formData.name || "Visiteur"}`)
     const body = encodeURIComponent(formData.message)
@@ -82,28 +127,36 @@ export default function LotusContact() {
       <div className="contact-content" ref={formRef}>
         <div className="contact-form-section">
           <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Nom"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-            <textarea
-              name="message"
-              placeholder="Message"
-              value={formData.message}
-              onChange={handleChange}
-              rows="6"
-              required
-            ></textarea>
+            <div className="form-group">
+              <input
+                type="text"
+                name="name"
+                placeholder="Nom *"
+                value={formData.name}
+                onChange={handleChange}
+                className={errors.name ? "error" : ""}
+              />
+              {errors.name && <span className="error-message">{errors.name}</span>}
+            </div>
+
+            <div className="form-group">
+              <textarea
+                name="message"
+                placeholder="Message *"
+                value={formData.message}
+                onChange={handleChange}
+                rows="6"
+                className={errors.message ? "error" : ""}
+              ></textarea>
+              {errors.message && <span className="error-message">{errors.message}</span>}
+            </div>
 
             <div className="button-group">
               <button
                 type="button"
                 onClick={handleWhatsAppSubmit}
                 className="submit-btn whatsapp-btn"
+                disabled={!formData.name.trim() || !formData.message.trim()}
               >
                 <span>ENVOYER AVEC WHATSAPP</span>
                 <MessageCircle className="button-icon" />
@@ -113,11 +166,14 @@ export default function LotusContact() {
                 type="button"
                 onClick={handleEmailSubmit}
                 className="submit-btn email-btn"
+                disabled={!formData.name.trim() || !formData.message.trim()}
               >
                 <Mail className="button-icon" />
                 <span>ENVOYER AVEC EMAIL</span>
               </button>
             </div>
+
+            <p className="required-note">* Champs obligatoires</p>
           </form>
         </div>
 

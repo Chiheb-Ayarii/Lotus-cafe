@@ -66,6 +66,11 @@
   gap: 20px;
 }
 
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
 .contact-form input,
 .contact-form textarea {
   background: transparent;
@@ -76,6 +81,13 @@
   font-size: 1rem;
   color: #4a4a4a;
   transition: all 0.3s ease;
+  width: 100%;
+}
+
+.contact-form input.error,
+.contact-form textarea.error {
+  border-bottom-color: #e74c3c;
+  box-shadow: 0 2px 0 0 rgba(231, 76, 60, 0.1);
 }
 
 .contact-form input::placeholder,
@@ -96,7 +108,34 @@
   min-height: 120px;
 }
 
-.submit-btn {
+.error-message {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+  font-family: "Montserrat", sans-serif;
+}
+
+.required-note {
+  text-align: center;
+  color: #666;
+  font-size: 12px;
+  margin-top: 10px;
+  font-style: italic;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* === Custom styles for WhatsApp & Email buttons === */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+/* Both buttons use the same base style as .submit-btn */
+.whatsapp-btn,
+.email-btn {
   background: transparent;
   border: 1px solid #7a9b76;
   color: #7a9b76;
@@ -107,14 +146,47 @@
   cursor: pointer;
   transition: all 0.4s ease;
   align-self: flex-start;
-  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
-.submit-btn:hover {
+/* WhatsApp hover effect — slightly deeper green tone */
+.whatsapp-btn:hover:not(:disabled) {
+  background: #6b8f67; /* darker variation of #7a9b76 */
+  color: #f5f5dc;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(107, 143, 103, 0.3);
+}
+
+/* Email hover effect — same idea, slightly different tone */
+.email-btn:hover:not(:disabled) {
   background: #7a9b76;
   color: #f5f5dc;
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(122, 155, 118, 0.3);
+}
+
+/* Disabled state for both buttons */
+.whatsapp-btn:disabled,
+.email-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.whatsapp-btn:disabled:hover,
+.email-btn:disabled:hover {
+  background: transparent;
+  color: #7a9b76;
+  box-shadow: none;
+  transform: none !important;
+}
+
+.button-icon {
+  width: 18px;
+  height: 18px;
 }
 
 .contact-info-section {
@@ -170,6 +242,19 @@
   }
 }
 
+/* Responsive layout — side by side on desktop */
+@media (min-width: 768px) {
+  .button-group {
+    flex-direction: row;
+  }
+
+  .whatsapp-btn,
+  .email-btn {
+    align-self: center;
+    flex: 1;
+  }
+}
+
 @media (max-width: 768px) {
   .contact-title {
     font-size: 2rem;
@@ -187,54 +272,14 @@
   .contact-info-section {
     padding-left: 0;
   }
-}
-/* === Custom styles for WhatsApp & Email buttons === */
-.button-group {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 15px;
-}
 
-/* Both buttons use the same base style as .submit-btn */
-.whatsapp-btn,
-.email-btn {
-  background: transparent;
-  border: 1px solid #7a9b76;
-  color: #7a9b76;
-  padding: 15px 40px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.9rem;
-  letter-spacing: 2px;
-  cursor: pointer;
-  transition: all 0.4s ease;
-  align-self: flex-start;
-}
-
-/* WhatsApp hover effect — slightly deeper green tone */
-.whatsapp-btn:hover {
-  background: #6b8f67; /* darker variation of #7a9b76 */
-  color: #f5f5dc;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(107, 143, 103, 0.3);
-}
-
-/* Email hover effect — same idea, slightly different tone */
-.email-btn:hover {
-  background: #7a9b76;
-  color: #f5f5dc;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(122, 155, 118, 0.3);
-}
-
-/* Responsive layout — side by side on desktop */
-@media (min-width: 768px) {
   .button-group {
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .whatsapp-btn,
   .email-btn {
-    align-self: center;
+    width: 100%;
+    align-self: stretch;
   }
 }

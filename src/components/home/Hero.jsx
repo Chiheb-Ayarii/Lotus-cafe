@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./hero.css";
 
 const slides = [
@@ -23,19 +23,27 @@ const Hero = () => {
   const [current, setCurrent] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const length = slides.length;
+  const intervalRef = useRef(null);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      handleSlideChange((current + 1) % length);
+    intervalRef.current = setInterval(() => {
+      setIsTransitioning(true);
+      setCurrent((prev) => (prev + 1) % length);
+      setTimeout(() => setIsTransitioning(false), 1500); // Synced to CSS transition duration
     }, 5000);
-    return () => clearInterval(timer);
-  }, [current, length]);
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, [length]); // Removed 'current' from deps to prevent restarts
 
   const handleSlideChange = (newIndex) => {
     if (isTransitioning) return;
     setIsTransitioning(true);
     setCurrent(newIndex);
-    setTimeout(() => setIsTransitioning(false), 1000);
+    setTimeout(() => setIsTransitioning(false), 1500);
   };
 
   const prevSlide = () => {
@@ -59,19 +67,17 @@ const Hero = () => {
           className={`slide ${index === current ? "active" : ""}`}
           key={index}
           style={{ backgroundImage: `url(${slide.image})` }}
-        >
-          {index === current && (
-            <div className="overlay" key={`overlay-${current}`}>
-              <h1 className="hero-title">{slide.title}</h1>
-              <p className="hero-desc">{slide.description}</p>
-              <div className="hero-buttons">
-                <button className="btn-primary">Menu <ion-icon name="chevron-forward-outline"></ion-icon></button>
-                <button className="btn-secondary">Reservation <ion-icon name="chevron-forward-outline"></ion-icon></button>
-              </div>
-            </div>
-          )}
-        </div>
+        />
       ))}
+      
+      <div className="overlay">
+        <h1 className="hero-title">{slides[current].title}</h1>
+        <p className="hero-desc">{slides[current].description}</p>
+        <div className="hero-buttons">
+          <button className="hero-btn">Menu <ion-icon name="chevron-forward-outline"></ion-icon></button>
+          <button className="hero-btn">Reservation <ion-icon name="chevron-forward-outline"></ion-icon></button>
+        </div>
+      </div>
       
       <button className="arrow left" onClick={prevSlide} aria-label="Previous slide">
         <ion-icon name="chevron-back-outline"></ion-icon>

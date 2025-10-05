@@ -347,7 +347,7 @@ ${formData.name}`
                     type="button"
                     onClick={handleWhatsAppReservation}
                     disabled={isSubmitting}
-                    className={`whatsapp-button ${isSubmitting ? 'submitting' : ''}`}
+                    className={`submit-btn whatsapp-btn ${isSubmitting ? 'submitting' : ''}`}
                   >
                     {isSubmitting ? (
                       <>
@@ -356,8 +356,8 @@ ${formData.name}`
                       </>
                     ) : (
                       <>
+                        <span>Reserve via WhatsApp</span>
                         <MessageCircle className="button-icon" />
-                        Reserve via WhatsApp
                       </>
                     )}
                   </button>
@@ -366,7 +366,7 @@ ${formData.name}`
                     type="button"
                     onClick={handleEmailReservation}
                     disabled={isSubmitting}
-                    className={`email-button ${isSubmitting ? 'submitting' : ''}`}
+                    className={`submit-btn email-btn ${isSubmitting ? 'submitting' : ''}`}
                   >
                     {isSubmitting ? (
                       <>

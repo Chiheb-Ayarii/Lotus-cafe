@@ -100,26 +100,6 @@ export function AboutSection() {
             <div className="decorative-element decorative-bottom-left"></div>
           </div>
         </div>
-
-        {/* Stats Section */}
-        <div className="stats-section">
-          <div className="stat-item">
-            <div className="stat-number">15+</div>
-            <p className="stat-label">Coffee Origins</p>
-          </div>
-          <div className="stat-item">
-            <div className="stat-number">50+</div>
-            <p className="stat-label">Specialty Drinks</p>
-          </div>
-          <div className="stat-item">
-            <div className="stat-number">5★</div>
-            <p className="stat-label">Customer Rating</p>
-          </div>
-          <div className="stat-item">
-            <div className="stat-number">1000+</div>
-            <p className="stat-label">Happy Customers</p>
-          </div>
-        </div>
       </div>
     </section>
   )
@@ -141,7 +121,7 @@ const specialties = [
     title: "Le Fameux Royale",
     category: "Breakfast",
     description: "Premium breakfast for two with omelets, charcuterie, 6 mini cheese tartines with salmon and bacon, and choice of mini pancakes.",
-    image: "https://images.unsplash.com/photo-1551782455-6a27c1c99452?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
     price: "$32.00",
     featured: true
   },

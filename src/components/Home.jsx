@@ -10,14 +10,13 @@ function Home() {
   return (
     <>
       <Hero />
-
+      <ReservationSection />
       <div>
         <AboutSection />
         <SpecialtiesSection />
         <TestimonialsSection />
       </div>
 
-      <ReservationSection />
     </>
   );
 }

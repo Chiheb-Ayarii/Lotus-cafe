@@ -263,12 +263,7 @@ export function SpecialtiesSection() {
                                     </div>
                                 )}
 
-                                {/* Hover Content */}
-                                <div className="hover-content">
-                                    <button className="hover-button">
-                                        Learn More
-                                    </button>
-                                </div>
+                                
                             </div>
 
                             {/* Content */}
@@ -285,11 +280,6 @@ export function SpecialtiesSection() {
                                 <p className="card-description">
                                     {item.description}
                                 </p>
-
-                                <div className="card-ct">
-                                    <span className="ct-text">Order Now</span>
-                                    <ArrowRight className="ct-icon" />
-                                </div>
                             </div>
                         </div>
                     ))}

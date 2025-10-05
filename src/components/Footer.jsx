@@ -1,4 +1,4 @@
-import { Coffee, Instagram, Facebook, Twitter, Mail, Phone, MapPin } from 'lucide-react'
+import { Coffee, Instagram, Facebook, Twitter,Mail, Phone, MapPin } from 'lucide-react'
 import './Footer.css'
 
 export default function Footer() {
@@ -41,14 +41,14 @@ export default function Footer() {
             </p>
 
             <div className="social-links">
-              <a href="#" className="social-link">
+              <a href="https://www.instagram.com/lotus_soukra/?hl=en" className="social-link" target='_blank'>
                 <Instagram size={18} />
               </a>
-              <a href="#" className="social-link">
+              <a href="https://www.facebook.com/p/LOTUS-soukra-61565204855190/" className="social-link" target='_blank'>
                 <Facebook size={18} />
               </a>
-              <a href="#" className="social-link">
-                <Twitter size={18} />
+              <a href="https://www.tiktok.com/@lotus_soukra" className="social-link" target='_blank'>
+                <ion-icon name="logo-tiktok"></ion-icon>
               </a>
             </div>
           </div>
@@ -90,15 +90,15 @@ export default function Footer() {
               <div className="contact-item">
                 <MapPin size={16} className="contact-icon" />
                 <div className="contact-text">
-                  <p>123 Coffee Street</p>
-                  <p>Downtown District</p>
-                  <p>City, State 12345</p>
+                  <p> Résidence Soukra City</p>
+                  <p> Avenue de l'U.M.A</p>
+                  <p>Tunis, Ariana</p>
                 </div>
               </div>
 
               <div className="contact-item">
                 <Phone size={16} className="contact-icon" />
-                <span className="contact-text">+1 (555) 123-4567</span>
+                <span className="contact-text">+216 26 069 268</span>
               </div>
 
               <div className="contact-item">
@@ -111,8 +111,8 @@ export default function Footer() {
             <div className="hours-section">
               <h5 className="hours-title">Opening Hours</h5>
               <div className="hours-text">
-                <p>Mon-Fri: 6:30 AM - 10:00 PM</p>
-                <p>Sat-Sun: 7:00 AM - 11:00 PM</p>
+                <p>Mon-Fri: 6:30 AM - 00:00 PM</p>
+                <p>Sat-Sun: 7:00 AM - 00:00 PM</p>
               </div>
             </div>
           </div>
@@ -124,19 +124,20 @@ export default function Footer() {
         <div className="footer-bottom-container">
           <div className="footer-bottom-content">
             <div className="copyright">
-              <p>© 2024 Lotus Coffee House. All rights reserved.</p>
+              <p>© 2026 Lotus Coffee House. All rights reserved.</p>
             </div>
 
             <div className="footer-links">
-              <a href="#" className="footer-bottom-link">
+              <span href="#" className="footer-bottom-link">
                 Privacy Policy
-              </a>
-              <a href="#" className="footer-bottom-link">
+              </span>
+              <span href="#" className="footer-bottom-link">
                 Terms of Service
-              </a>
-              <a href="#" className="footer-bottom-link">
+              </span>
+              <span href="#" className="footer-bottom-link">
                 Cookie Policy
-              </a>
+              </span>
+              
             </div>
           </div>
         </div>

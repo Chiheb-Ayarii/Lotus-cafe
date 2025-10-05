@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react"
 import "./contact.css"
-
+import { Mail, MessageCircle } from 'lucide-react'
 export default function LotusContact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -105,7 +105,8 @@ export default function LotusContact() {
                 onClick={handleWhatsAppSubmit}
                 className="submit-btn whatsapp-btn"
               >
-                ENVOYER AVEC WHATSAPP
+                <span>ENVOYER AVEC WHATSAPP</span>
+                <MessageCircle className="button-icon" />
               </button>
 
               <button
@@ -113,7 +114,8 @@ export default function LotusContact() {
                 onClick={handleEmailSubmit}
                 className="submit-btn email-btn"
               >
-                ENVOYER AVEC EMAIL
+                <Mail className="button-icon" />
+                <span>ENVOYER AVEC EMAIL</span>
               </button>
             </div>
           </form>

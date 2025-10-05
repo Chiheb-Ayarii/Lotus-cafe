@@ -196,8 +196,7 @@
     gap: 15px;
   }
   
-  .btn-primary,
-  .btn-secondary {
+  .hero-btn {
     padding: 14px 30px;
     width: 200px;
   }

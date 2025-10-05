@@ -178,12 +178,13 @@ export default function LotusContact() {
         </div>
 
         <div className="contact-info-section">
-          <h3 className="info-title">CAFÉ LOTUS TUNIS</h3>
+          <h3 className="info-title">CAFÉ LOTUS Soukra</h3>
           <div className="info-details">
-            <p className="info-address">123 Avenue Habib Bourguiba</p>
-            <p className="info-address">Tunis 1000, Tunisie</p>
-            <p className="info-phone">+216 52515313</p>
-            <p className="info-email">chihebayari520@gmail.com</p>
+            <p className="info-address">Résidence Soukra City</p>
+            <p className="info-address">Avenue de l'U.M.A</p>
+            <p className="info-address">Tunis, Ariana</p>
+            <p className="info-phone">+216 26 069 268</p>
+            <p className="info-email">hello@lotuscoffee.com</p>
           </div>
         </div>
       </div>

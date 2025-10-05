@@ -6,7 +6,6 @@ import "./contact.css"
 export default function LotusContact() {
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
     message: "",
   })
   const formRef = useRef(null)
@@ -24,21 +23,49 @@ export default function LotusContact() {
     )
 
     if (formRef.current) observer.observe(formRef.current)
-
     return () => observer.disconnect()
   }, [])
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log("Form submitted:", formData)
-    // Handle form submission
-  }
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     })
+  }
+
+  // 🔍 Get phone and email dynamically from the contact info section
+  const getContactInfo = () => {
+    const phoneElement = document.querySelector(".info-phone")
+    const emailElement = document.querySelector(".info-email")
+
+    const phoneNumber = phoneElement
+      ? phoneElement.textContent.replace(/[^0-9]/g, "")
+      : "21652515313"
+
+    const email = emailElement ? emailElement.textContent.trim() : "chihebayari520@gmail.com"
+
+    return { phoneNumber, email }
+  }
+
+  // 📱 Send via WhatsApp
+  const handleWhatsAppSubmit = (e) => {
+    e.preventDefault()
+    const { phoneNumber } = getContactInfo()
+    const namePart = formData.name ? `Nom: ${formData.name}\n\n` : ""
+    const message = `${namePart}Message:\n${formData.message}`
+    const encodedMessage = encodeURIComponent(message)
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`
+    window.open(whatsappURL, "_blank")
+  }
+
+  // 📧 Always open Gmail compose (works on all devices)
+  const handleEmailSubmit = (e) => {
+    e.preventDefault()
+    const { email } = getContactInfo()
+    const subject = encodeURIComponent(`Message de ${formData.name || "Visiteur"}`)
+    const body = encodeURIComponent(formData.message)
+    const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`
+    window.open(gmailURL, "_blank")
   }
 
   return (
@@ -54,13 +81,12 @@ export default function LotusContact() {
 
       <div className="contact-content" ref={formRef}>
         <div className="contact-form-section">
-          <form onSubmit={handleSubmit} className="contact-form">
-            <input type="text" name="name" placeholder="Nom" value={formData.name} onChange={handleChange} required />
+          <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
             <input
-              type="email"
-              name="email"
-              placeholder="E-mail"
-              value={formData.email}
+              type="text"
+              name="name"
+              placeholder="Nom"
+              value={formData.name}
               onChange={handleChange}
               required
             />
@@ -72,9 +98,24 @@ export default function LotusContact() {
               rows="6"
               required
             ></textarea>
-            <button type="submit" className="submit-btn">
-              ENVOYER
-            </button>
+
+            <div className="button-group">
+              <button
+                type="button"
+                onClick={handleWhatsAppSubmit}
+                className="submit-btn whatsapp-btn"
+              >
+                ENVOYER AVEC WHATSAPP
+              </button>
+
+              <button
+                type="button"
+                onClick={handleEmailSubmit}
+                className="submit-btn email-btn"
+              >
+                ENVOYER AVEC EMAIL
+              </button>
+            </div>
           </form>
         </div>
 
@@ -83,8 +124,8 @@ export default function LotusContact() {
           <div className="info-details">
             <p className="info-address">123 Avenue Habib Bourguiba</p>
             <p className="info-address">Tunis 1000, Tunisie</p>
-            <p className="info-phone">+216 71 123 456</p>
-            <p className="info-email">contact@lotuscafe.com</p>
+            <p className="info-phone">+216 52515313</p>
+            <p className="info-email">chihebayari520@gmail.com</p>
           </div>
         </div>
       </div>

@@ -1,0 +1,459 @@
+.reservation-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f6f2 0%, #ffffff 100%);
+}
+
+.reservation-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Section Header */
+.reservation-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.reservation-decorative {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 20px;
+  color: #8a9b6e;
+  margin-bottom: 16px;
+}
+
+.reservation-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.divider-line {
+  height: 1px;
+  background-color: #d4c9b9;
+  width: 64px;
+}
+
+.divider-icon {
+  margin: 0 16px;
+  color: #8a9b6e;
+  width: 24px;
+  height: 24px;
+}
+
+.reservation-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #2c5530;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.reservation-description {
+  font-size: 18px;
+  color: #6b7280;
+  max-width: 672px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Reservation Content */
+.reservation-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 64px;
+}
+
+@media (min-width: 1024px) {
+  .reservation-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+
+/* Left Side - Contact Info */
+.contact-info-side {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contact-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2c5530;
+  margin-bottom: 24px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.benefit-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.benefit-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #8a9b6e, #a8b892);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.benefit-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.benefit-content h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2c5530;
+  margin-bottom: 4px;
+}
+
+.benefit-content p {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.contact-details {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.contact-subtitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2c5530;
+  margin-bottom: 16px;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.contact-icon {
+  width: 16px;
+  height: 16px;
+  color: #8a9b6e;
+}
+
+.reservation-policy {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.policy-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2c5530;
+  margin-bottom: 16px;
+}
+
+.policy-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.policy-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+.policy-list li:before {
+  content: '•';
+  position: absolute;
+  left: 8px;
+  color: #8a9b6e;
+  font-weight: bold;
+}
+
+.policy-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Right Side - Reservation Form */
+.reservation-form-side {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 640px) {
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2c5530;
+  margin-bottom: 8px;
+}
+
+.label-icon {
+  width: 16px;
+  height: 16px;
+  color: #8a9b6e;
+}
+
+.form-input,
+.form-textarea {
+  padding: 12px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #8a9b6e;
+  box-shadow: 0 0 0 3px rgba(138, 155, 110, 0.1);
+}
+
+.form-input::placeholder {
+  color: #9ca3af;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+}
+
+/* Guest Buttons */
+.guest-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.guest-button {
+  padding: 12px 8px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  background: white;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.guest-button:hover {
+  border-color: #8a9b6e;
+  color: #2c5530;
+}
+
+.guest-button-active {
+  border-color: #8a9b6e;
+  background: #8a9b6e;
+  color: white;
+}
+
+/* Submit Button */
+.submit-button {
+  padding: 16px 32px;
+  background: linear-gradient(135deg, #8a9b6e, #a8b892);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.submit-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(138, 155, 110, 0.3);
+}
+
+.submit-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.submit-button.submitting {
+  background: #9ca3af;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.form-note {
+  font-size: 12px;
+  color: #6b7280;
+  text-align: center;
+  margin: 0;
+}
+
+/* Success Message */
+.success-message {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.success-icon {
+  width: 64px;
+  height: 64px;
+  color: #10b981;
+  margin: 0 auto 20px;
+}
+
+.success-message h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2c5530;
+  margin-bottom: 12px;
+}
+
+.success-message p {
+  font-size: 16px;
+  color: #6b7280;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.success-note {
+  font-size: 14px;
+  color: #8a9b6e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .reservation-section {
+    padding: 60px 0;
+  }
+  
+  .reservation-title {
+    font-size: 36px;
+  }
+  
+  .reservation-container {
+    padding: 0 20px;
+  }
+  
+  .reservation-form-side {
+    padding: 24px;
+  }
+  
+  .guest-buttons {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .reservation-section {
+    padding: 40px 0;
+  }
+  
+  .reservation-header {
+    margin-bottom: 48px;
+  }
+  
+  .reservation-title {
+    font-size: 28px;
+  }
+  
+  .reservation-description {
+    font-size: 16px;
+  }
+  
+  .benefit-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+  
+  .guest-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500&display=swap");
+
+.lotus-about {
+  background-color: #2a3a2e;
+  color: #f5f5dc;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+}
+
+/* heroabout Section */
+.heroabout-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a2a1e 0%, #2a3a2e 50%, #3a4a3e 100%);
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.heroabout-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.heroabout-content {
+  text-align: center;
+}
+
+.heroabout-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 120px;
+  font-weight: 300;
+  color: #d4c5a0;
+  line-height: 1;
+  margin-bottom: 20px;
+  letter-spacing: 8px;
+}
+
+.heroabout-subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  color: #d4c5a0;
+  letter-spacing: 12px;
+  text-transform: uppercase;
+}
+
+/* Section Base Styles */
+.lotusabout {
+  padding: 120px 40px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.lotusabout.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.section-container.reverse {
+  flex-direction: row-reverse;
+}
+
+.section-text,
+.intro-content {
+  flex: 1;
+}
+
+.section-image,
+.intro-image {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.section-image img,
+.intro-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.section-image:hover img,
+.intro-image:hover img {
+  transform: scale(1.05);
+}
+
+.section-tagline {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+  font-style: italic;
+  color: #8ba888;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.section-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 48px;
+  font-weight: 400;
+  color: #d4c5a0;
+  margin-bottom: 30px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.decorative-line {
+  display: inline-block;
+  margin: 0 15px;
+  color: #8ba888;
+  font-size: 32px;
+}
+
+.section-description {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #e8e8d8;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Intro Section */
+.intro-section {
+  background-color: #1a2a1e;
+}
+
+.intro-content {
+  position: relative;
+}
+
+.lotus-pattern {
+  width: 200px;
+  height: 200px;
+  margin: 40px 0;
+  color: #8ba888;
+}
+
+.pattern-svg {
+  width: 100%;
+  height: 100%;
+  animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.intro-text p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #e8e8d8;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Prestige Section */
+.prestige-section {
+  background-color: #2a3a2e;
+}
+
+/* Distinction Section */
+.distinction-section {
+  background-color: #1a2a1e;
+}
+
+/* Elegance Section */
+.elegance-section {
+  background-color: #2a3a2e;
+}
+
+/* Excellence Section */
+.excellence-section {
+  background-color: #1a2a1e;
+}
+
+/* CTA Button */
+.cta-button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #d4c5a0;
+  background-color: transparent;
+  border: 2px solid #8ba888;
+  padding: 15px 40px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  margin-top: 30px;
+}
+
+.cta-button:hover {
+  background-color: #8ba888;
+  color: #1a2a1e;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(139, 168, 136, 0.3);
+}
+
+/* Visit Section */
+.visit-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #3a4a3e 0%, #2a3a2e 50%, #1a2a1e 100%);
+  text-align: center;
+}
+
+.visit-content {
+  max-width: 800px;
+}
+
+.visit-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 100px;
+  font-weight: 300;
+  color: #d4c5a0;
+  line-height: 1;
+  margin-bottom: 20px;
+  letter-spacing: 8px;
+  opacity: 0.3;
+}
+
+.visit-tagline {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  font-style: italic;
+  color: #8ba888;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+.visit-heading {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 42px;
+  font-weight: 400;
+  color: #d4c5a0;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.visit-description {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #e8e8d8;
+  margin-bottom: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .heroabout-title {
+    font-size: 80px;
+  }
+
+  .section-container,
+  .section-container.reverse {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .section-title {
+    font-size: 38px;
+  }
+
+  section {
+    padding: 80px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroabout-title {
+    font-size: 60px;
+  }
+
+  .heroabout-subtitle {
+    font-size: 18px;
+    letter-spacing: 8px;
+  }
+
+  .section-title {
+    font-size: 32px;
+    letter-spacing: 4px;
+  }
+
+  .visit-title {
+    font-size: 60px;
+  }
+
+  .visit-heading {
+    font-size: 32px;
+  }
+
+  section {
+    padding: 60px 20px;
+  }
+}

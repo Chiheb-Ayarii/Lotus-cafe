@@ -75,7 +75,7 @@ const Hero = () => {
         <p className="hero-desc">{slides[current].description}</p>
         <div className="hero-buttons">
           <button className="hero-btn">Menu <ion-icon name="chevron-forward-outline"></ion-icon></button>
-          <button className="hero-btn">Reservation <ion-icon name="chevron-forward-outline"></ion-icon></button>
+          <button className="hero-btn">Reservation</button>
         </div>
       </div>
       

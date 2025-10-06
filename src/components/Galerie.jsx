@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import "./lotusgallery.css"
+import "./Galerie.css"
 
 export default function Lotusgallery() {
   const imagesRef = useRef([])

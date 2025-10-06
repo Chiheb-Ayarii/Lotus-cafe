@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import "./lotusmenu.css"
+import "./Menu.css"
 
 export default function Lotusmenu({ onViewMore }) {
   const sectionsRef = useRef([])

@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react"
 import "./lotusabout.css"
 
-export default function LotusAbout() {
+export default function LotusAbout({ onNavigate }) {
   const sectionsRef = useRef([])
 
   useEffect(() => {
@@ -37,9 +37,9 @@ export default function LotusAbout() {
       <section className="heroabout-section" ref={addToRefs}>
         <div className="heroabout-content">
           <h1 className="heroabout-title">
-            The
-            <br />
             Lotus
+            <br />
+            Soukra
           </h1>
           <p className="heroabout-subtitle">À PROPOS DE NOUS</p>
         </div>
@@ -113,7 +113,11 @@ export default function LotusAbout() {
               impeccable et à une décoration inspirée de la nature, il offre une expérience inégalée qui définit
               l'élégance et la sérénité.
             </p>
-            <button className="cta-button">NOTRE MENU</button>
+            <button className="cta-button"
+             onClick={() => {
+                if (onNavigate) onNavigate('menu')
+                if (typeof window !== 'undefined') window.scrollTo({ top: 0 })
+              }}>NOTRE MENU</button>
           </div>
           <div className="section-image">
             <img src="/lotus-cafe-exterior.jpg" alt="Lotus Café Exterior" />

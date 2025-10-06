@@ -1,7 +1,21 @@
 import { Coffee, Instagram, Facebook, Twitter,Mail, Phone, MapPin } from 'lucide-react'
 import './Footer.css'
 
-export default function Footer() {
+// wait for an element to appear in the DOM, then call callback
+function waitForElement(selector, timeout = 1000) {
+  return new Promise((resolve) => {
+    const start = Date.now()
+    const check = () => {
+      const el = document.querySelector(selector)
+      if (el) return resolve(el)
+      if (Date.now() - start > timeout) return resolve(null)
+      requestAnimationFrame(check)
+    }
+    check()
+  })
+}
+
+export default function Footer({ onNavigate }) {
   const quickLinks = [
     { name: 'About Us', href: '#about' },
     { name: 'Our Menu', href: '#menu' },
@@ -20,6 +34,12 @@ export default function Footer() {
 
   return (
     <footer className="footer">
+      {/* helper to navigate to home then scroll to an anchor when element is available */}
+      {/* placed here so it can capture onNavigate from props */}
+      {
+        /* eslint-disable no-unused-vars */
+      }
+      <script type="text/javascript" dangerouslySetInnerHTML={{__html: ''}} />
       {/* Main Footer Content */}
       <div className="footer-main">
         <div className="footer-container">
@@ -59,10 +79,35 @@ export default function Footer() {
             <ul className="link-list">
               {quickLinks.map((link, index) => (
                 <li key={index} className="link-item">
-                  <a href={link.href} className="footer-link">
+                  <button
+                    style={{ backgroundColor: 'transparent', border: 'none', borderRadius: 0, padding: 0, boxShadow: 'none' }}
+                    type="button"
+                    className="footer-link"
+                    onClick={() => {
+                      // map known anchors to page navigation or in-page scroll
+                      if (link.href === '#menu') {
+                        if (onNavigate) onNavigate('menu')
+                        if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' })
+                      } else if (link.href === '#about') {
+                        if (onNavigate) onNavigate('about')
+                        if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' })
+                      } else if (link.href === '#contact') {
+                        if (onNavigate) onNavigate('contact')
+                        if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' })
+                      } else {
+                        // default: navigate to home and scroll to the id when present
+                        if (onNavigate) onNavigate('home')
+                        if (typeof document !== 'undefined') {
+                          waitForElement(link.href).then((el) => {
+                            if (el) el.scrollIntoView({ behavior: 'smooth' })
+                          })
+                        }
+                      }
+                    }}
+                  >
                     <Coffee size={14} className="link-icon" />
                     {link.name}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -74,10 +119,22 @@ export default function Footer() {
             <ul className="link-list">
               {signatureItems.map((item, index) => (
                 <li key={index} className="link-item">
-                  <a href={item.href} className="footer-link">
+                  <button
+                    style={{ backgroundColor: 'transparent', border: 'none', borderRadius: 0, padding: 0, boxShadow: 'none' }}
+                    type="button"
+                    className="footer-link"
+                    onClick={() => {
+                      if (onNavigate) onNavigate('home')
+                      if (typeof document !== 'undefined') {
+                        waitForElement(item.href).then((el) => {
+                          if (el) el.scrollIntoView({ behavior: 'smooth' })
+                        })
+                      }
+                    }}
+                  >
                     <Coffee size={14} className="link-icon" />
                     {item.name}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -137,7 +194,7 @@ export default function Footer() {
               <span href="#" className="footer-bottom-link">
                 Cookie Policy
               </span>
-              
+
             </div>
           </div>
         </div>

@@ -19,7 +19,7 @@ const slides = [
   }
 ];
 
-const Hero = () => {
+const Hero = ({ onNavigate }) => {
   const [current, setCurrent] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const length = slides.length;
@@ -74,8 +74,22 @@ const Hero = () => {
         <h1 className="hero-title">{slides[current].title}</h1>
         <p className="hero-desc">{slides[current].description}</p>
         <div className="hero-buttons">
-          <button className="hero-btn">Menu <ion-icon name="chevron-forward-outline"></ion-icon></button>
-          <button className="hero-btn">Reservation</button>
+          <button className="hero-btn" onClick={() => {
+                if (onNavigate) onNavigate('menu')
+                if (typeof window !== 'undefined') window.scrollTo({ top: 0})
+              }}>Menu <ion-icon name="chevron-forward-outline"></ion-icon></button>
+          <button className="hero-btn" onClick={() => {
+                // navigate to home page then scroll to reservations section
+                if (onNavigate) onNavigate('home')
+                if (typeof window !== 'undefined') {
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                  // allow smooth scroll then jump to section
+                  setTimeout(() => {
+                    const el = document.getElementById('reservations')
+                    if (el) el.scrollIntoView({ behavior: 'smooth' })
+                  }, 300)
+                }
+              }}>Reservation</button>
         </div>
       </div>
       

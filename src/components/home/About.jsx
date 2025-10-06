@@ -9,7 +9,7 @@ import {
 import './about.css'
 
 // About Section Component
-export function AboutSection() {
+export function AboutSection({ onNavigate }) {
   return (
     <section className="about-section">
       <div className="about-container">
@@ -198,7 +198,7 @@ const specialties = [
     featured: false
   }
 ];
-export function SpecialtiesSection() {
+export function SpecialtiesSection({ onNavigate }) {
     const [selectedCategory, setSelectedCategory] = useState('Breakfast')
     const categories = ['Breakfast', 'Brunch', 'Drinks', 'Crepes/Waffles']
 
@@ -286,17 +286,21 @@ export function SpecialtiesSection() {
                 </div>
 
                 {/* Call to Action */}
-                <div className="ct-section">
-                    <div className="ct-wrapper">
-                        <a
-                            href="#menu"
-                            className="ct-button"
-                        >
-                            View Full Menu
-                            <ArrowRight className="ct-button-icon" />
-                        </a>
-                    </div>
-                </div>
+        <div className="ct-section">
+          <div className="ct-wrapper">
+            <button
+              type="button"
+              className="ct-button"
+              onClick={() => {
+                if (onNavigate) onNavigate('menu')
+                if (typeof window !== 'undefined') window.scrollTo({ top: 0 })
+              }}
+            >
+              View Full Menu
+              <ArrowRight className="ct-button-icon" />
+            </button>
+          </div>
+        </div>
             </div>
         </section>
     )
@@ -354,7 +358,7 @@ const testimonials = [
   }
 ]
 
-export function TestimonialsSection() {
+export function TestimonialsSection({ onNavigate }) {
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)
 
@@ -491,12 +495,16 @@ export function TestimonialsSection() {
           <h3 className="ct-title">
             Ready to create your own coffee story?
           </h3>
-          <a
-            href="#contact"
+          <button
+            type="button"
             className="ct-button"
+            onClick={() => {
+              if (onNavigate) onNavigate('contact')
+              if (typeof window !== 'undefined') window.scrollTo({ top: 0 })
+            }}
           >
             Visit Us Today
-          </a>
+          </button>
         </div>
       </div>
     </section>

@@ -4,17 +4,17 @@ import { AboutSection, SpecialtiesSection, TestimonialsSection } from './home/Ab
 import ReservationSection from './home/Reservation.jsx';
 
 
-function Home() {
+function Home({ onNavigate }) {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <Hero />
+      <Hero onNavigate={onNavigate} />
       <ReservationSection />
       <div>
-        <AboutSection />
-        <SpecialtiesSection />
-        <TestimonialsSection />
+        <AboutSection onNavigate={onNavigate} />
+        <SpecialtiesSection onNavigate={onNavigate} />
+        <TestimonialsSection onNavigate={onNavigate} />
       </div>
 
     </>

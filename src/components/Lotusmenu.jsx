@@ -133,7 +133,15 @@ const menuCategories = [
               <p className="category-subtitle">{category.subtitle}</p>
               <h2 className="category-title">{category.title}</h2>
               <p className="category-description">{category.description}</p>
-               <button className="voir-plus-btn" onClick={() => onViewMore(category.title)}>VOIR PLUS</button>
+               <button
+                 className="voir-plus-btn"
+                 onClick={() => {
+                   if (onViewMore) onViewMore(category.title)
+                   if (typeof window !== 'undefined') window.scrollTo({ top: 0 })
+                 }}
+               >
+                 VOIR PLUS
+               </button>
             </div>
           </div>
         ))}

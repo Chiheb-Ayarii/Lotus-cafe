@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Nav from './components/nav'
 import Home from './components/Home'
 import LotusAbout from './components/Lotusabout.jsx'
@@ -18,6 +18,13 @@ function App() {
       setSelectedCategory(null)
     }
   }
+
+  // scroll to top whenever the active page changes
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }, [activePage])
 
   const handleViewCategory = (category) => {
     setSelectedCategory(category)
@@ -49,9 +56,9 @@ function App() {
 
   return (
     <>
-      <Nav onNavigate={handleNavigate} />
-      {PageComponent}
-      <Footer />
+  <Nav onNavigate={handleNavigate} />
+  {React.cloneElement(PageComponent, { onNavigate: handleNavigate })}
+  <Footer onNavigate={handleNavigate} />
     </>
   )
 }

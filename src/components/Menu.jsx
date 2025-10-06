@@ -117,6 +117,15 @@ const menuCategories = [
           Le Menu du Lotus Café marie à la perfection saveurs locales et internationales, offrant des plats élégants et
           savoureux. Chaque choix est pensé pour satisfaire tous les goûts dans un cadre chaleureux et accueillant.
         </p>
+        <button
+            className="voir-plus-btn Fullmenu"
+            onClick={() => {
+              if (onViewMore) onViewMore(category.title)
+              if (typeof window !== 'undefined') window.scrollTo({ top: 0 })
+            }}
+          >
+            Voir Menu Complet
+          </button>
       </div>
 
       <div className="menu-categories">

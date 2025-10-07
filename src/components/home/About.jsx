@@ -211,17 +211,16 @@ export function SpecialtiesSection({ onNavigate }) {
             <div className="specialties-container">
                 {/* Section Header */}
                 <div className="specialties-header">
-                    <p className="specialties-decorative">What makes us special</p>
+                    <p className="specialties-decorative">L’exception Lotus</p>
                     <div className="specialties-divider">
                         <div className="divider-line"></div>
                         <div className="divider-dot"></div>
                         <div className="divider-line"></div>
                     </div>
-                    <h2 className="specialties-title">Our Signature</h2>
-                    <h3 className="specialties-subtitle">Specialties</h3>
+                    <h2 className="specialties-title">Les Pépites du Lotus</h2>
+                    <h3 className="specialties-subtitle">Specialtiés</h3>
                     <p className="specialties-description">
-                        Discover our carefully curated selection of specialty coffees, each crafted with
-                        premium ingredients and traditional techniques for an extraordinary taste experience.
+                        Découvrez notre sélection soigneusement choisie de cafés de spécialité, chacun préparé avec des ingrédients premium et des techniques traditionnelles pour une expérience gustative extraordinaire.
                     </p>
                 </div>
 
@@ -295,7 +294,7 @@ export function SpecialtiesSection({ onNavigate }) {
                 if (typeof window !== 'undefined') window.scrollTo({ top: 0 })
               }}
             >
-              View Full Menu
+              Voir Menu Complet
               <ArrowRight className="ct-button-icon" />
             </button>
           </div>
@@ -311,42 +310,42 @@ const testimonials = [
     id: 1,
     name: "Sarah Chen",
     rating: 5,
-    text: "Had a fantastic lunch here! The food was delicious, and the staff were incredibly welcoming and helpful. Highly recommend this place!",
+    text: "Déjeuner parfait ! Nourriture délicieuse et accueil chaleureux. Je recommande vivement !",
     image: "https://images.unsplash.com/photo-1494790108755-2616b612b1b3?w=150&h=150&fit=crop&crop=faces&auto=format"
   },
   {
     id: 2,
     name: "Samar Ben haj ali",
     rating: 5,
-    text: "A nice place to chat and have a good time. The atmosphere is calm and pleasant. Ideal for an outing with friends.",
+    text: "Un repas délicieux et un personnel aux petits soins. À ne pas manquer !",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
   },
   {
     id: 3,
     name: "Ameur ZAMMOURI",
     rating: 4,
-    text: "Very clean, cozy, and friendly.",
+    text: "Nourriture savoureuse, service impeccable. Je reviendrai sans hésiter !",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
   },
   {
     id: 4,
     name: "Lina Miled",
     rating: 5,
-    text: "Perfect study spot with amazing coffee. The WiFi is reliable, the environment is peaceful, and their cold brew keeps me energized throughout my study sessions.",
+    text: "Espace cosy et lumineux, idéal pour les sessions de révision.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
   },
   {
     id: 5,
     name: "Mohamed Amine",
     rating: 5,
-    text: "Lotus inspires creativity. The beautiful interior design and exceptional coffee create the perfect atmosphere for my art. Their seasonal specials are always delightful surprises.",
+    text: "Un intérieur apaisant où l’inspiration vient naturellement.",
     image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&h=150&fit=crop&crop=face"
   },
   {
     id: 6,
     name: "Wissem Sahli",
     rating: 4,
-    text: "Finally found a place that respects coffee as much as I do. The single-origin selections are exceptional, and the brewing methods showcase each bean's unique character.",
+    text: "L’endroit parfait pour respirer, réfléchir et savourer un bon café.",
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
   }
 ]
@@ -388,19 +387,19 @@ export function TestimonialsSection({ onNavigate }) {
       <div className="testimonials-container">
         {/* Section Header */}
         <div className="testimonials-header">
-          <p className="testimonials-decorative">What our customers say</p>
+          <p className="testimonials-decorative">Les avis de nos clients</p>
           <div className="testimonials-divider">
             <div className="divider-line"></div>
             <Quote className="divider-icon" />
             <div className="divider-line"></div>
           </div>
           <h2 className="testimonials-title">
-            Customer Reviews
+            Témoignages
           </h2>
           <p className="testimonials-description">
-            Hear from our valued customers about their experiences at Lotus Coffee House.
-            Every review inspires us to continue delivering exceptional coffee and service.
-          </p>
+            Découvrez les avis de nos clients sur leur expérience au Lotus Coffee House.
+            Chaque commentaire nous inspire à continuer d’offrir un café et un service d’exception.
+            </p>
         </div>
 
         {/* Testimonial Carousel */}
@@ -496,7 +495,7 @@ export function TestimonialsSection({ onNavigate }) {
               if (typeof window !== 'undefined') window.scrollTo({ top: 0 })
             }}
           >
-            Visit Us Today
+            Envoyez-nous un message
           </button>
         </div>
       </div>

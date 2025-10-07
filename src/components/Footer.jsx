@@ -56,8 +56,7 @@ export default function Footer({ onNavigate }) {
             </div>
 
             <p className="brand-description">
-              Where exceptional coffee meets tranquil ambiance. Experience the art of coffee
-              crafted with passion and served with love.
+              Café d’exception, ambiance tranquille. Préparé avec passion, servi avec amour.
             </p>
 
             <div className="social-links">
@@ -75,7 +74,7 @@ export default function Footer({ onNavigate }) {
 
           {/* Quick Links */}
           <div className="footer-section">
-            <h4 className="section-title">Quick Links</h4>
+            <h4 className="section-title">Accès rapide</h4>
             <ul className="link-list">
               {quickLinks.map((link, index) => (
                 <li key={index} className="link-item">
@@ -115,7 +114,7 @@ export default function Footer({ onNavigate }) {
 
           {/* Signature Items */}
           <div className="footer-section">
-            <h4 className="section-title">Our Signatures</h4>
+            <h4 className="section-title">Nos Spécialités</h4>
             <ul className="link-list">
               {signatureItems.map((item, index) => (
                 <li key={index} className="link-item">
@@ -142,7 +141,7 @@ export default function Footer({ onNavigate }) {
 
           {/* Contact Info */}
           <div className="footer-section">
-            <h4 className="section-title">Contact Info</h4>
+            <h4 className="section-title">Infos de contact</h4>
             <div className="contact-info">
               <div className="contact-item">
                 <MapPin size={16} className="contact-icon" />
@@ -166,10 +165,10 @@ export default function Footer({ onNavigate }) {
 
             {/* Hours */}
             <div className="hours-section">
-              <h5 className="hours-title">Opening Hours</h5>
+              <h5 className="hours-title">Nos horaires</h5>
               <div className="hours-text">
-                <p>Mon-Fri: 6:30 AM - 00:00 PM</p>
-                <p>Sat-Sun: 7:00 AM - 00:00 PM</p>
+                <p>Lundi-Vendredi : 6h30 - minuit</p>
+                <p>Samedi-Dimanche : 7h00 - minuit</p>
               </div>
             </div>
           </div>

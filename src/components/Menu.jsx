@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react"
 import "./Menu.css"
 
-export default function Lotusmenu({ onViewMore }) {
+export default function Lotusmenu({ onViewMore, onNavigate }) {
   const sectionsRef = useRef([])
 
   useEffect(() => {
@@ -120,7 +120,7 @@ const menuCategories = [
         <button
             className="voir-plus-btn Fullmenu"
             onClick={() => {
-              if (onViewMore) onViewMore(category.title)
+              if (onNavigate) onNavigate('fullmenu')
               if (typeof window !== 'undefined') window.scrollTo({ top: 0 })
             }}
           >
@@ -152,7 +152,22 @@ const menuCategories = [
                  VOIR PLUS
                </button>
             </div>
+
+            {/* small modern green separator under each category */}
+            <div
+              className="category-separator"
+              style={{
+                width: "80%",
+                maxWidth: "150px",
+                height: 0,
+                borderTop: "2px solid #27ae60",
+                margin: "16px auto 4px",
+                borderRadius: "2px",
+                opacity: 0.95,
+              }}
+            />
           </div>
+          
         ))}
       </div>
     </div>

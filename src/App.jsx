@@ -7,6 +7,7 @@ import Lotusmenu from './components/Menu.jsx'
 import MenuDetail from './components/Menudetail.jsx'
 import LotusContact from './components/contact.jsx'
 import Footer from './components/Footer.jsx'
+import Fullmenu from './components/Fullmenu.jsx'
 
 function App() {
   const [activePage, setActivePage] = useState('home')
@@ -44,6 +45,9 @@ function App() {
       break
     case 'menuDetail':
       PageComponent = <MenuDetail category={selectedCategory} onBack={() => handleNavigate('menu')} />
+      break
+    case 'fullmenu':
+      PageComponent = <Fullmenu />
       break
     case 'contact':
       PageComponent = <LotusContact />

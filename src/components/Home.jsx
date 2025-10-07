@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Hero from './home/Hero.jsx';
 import { AboutSection, SpecialtiesSection, TestimonialsSection } from './home/About.jsx';
 import ReservationSection from './home/Reservation.jsx';
+import LotusCafeMenuPage from './Fullmenu.jsx';
 
 
 function Home({ onNavigate }) {
@@ -16,6 +17,7 @@ function Home({ onNavigate }) {
         <SpecialtiesSection onNavigate={onNavigate} />
         <TestimonialsSection onNavigate={onNavigate} />
       </div>
+      <LotusCafeMenuPage onNavigate={onNavigate} />
 
     </>
   );

@@ -1,0 +1,446 @@
+/* Lotus Cafe Menu Styles - Lighter & Softer Color Palette */
+
+/* Updated color palette to be lighter and more pastel */
+.lotusMenuContainer {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #faf8f5 0%, #f5f0e8 100%);
+  font-family: "Georgia", "Times New Roman", serif;
+  color: #5a7358;
+  padding: 0;
+  margin: 0;
+}
+
+.lotusMenuHeader {
+  text-align: center;
+  padding: 60px 20px 40px;
+  background: linear-gradient(135deg, #a8c5a4 0%, #b8d4b4 100%);
+  color: #ffffff;
+  border-bottom: 4px solid #d4e5d2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+/* Updated lotus icon animations with drawing effect */
+.lotusIconContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.lotusIcon {
+  width: 120px;
+  height: 90px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.lotusIcon:hover {
+  transform: scale(1.15);
+}
+
+/* Drawing animation for lotus petals */
+.lotusPetalCenter,
+.lotusPetalLeft,
+.lotusPetalRight {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawPetal 3s ease-in-out forwards;
+}
+
+.lotusPetalCenter {
+  animation-delay: 0s;
+}
+
+.lotusPetalLeft {
+  animation-delay: 0.5s;
+}
+
+.lotusPetalRight {
+  animation-delay: 1s;
+}
+
+@keyframes drawPetal {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Hover effect - redraw animation */
+.lotusIcon:hover .lotusPetalCenter,
+.lotusIcon:hover .lotusPetalLeft,
+.lotusIcon:hover .lotusPetalRight {
+  animation: redrawPetal 2s ease-in-out infinite;
+}
+
+@keyframes redrawPetal {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.lotusTitle {
+  font-size: 72px;
+  font-weight: 300;
+  letter-spacing: 12px;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  font-family: "Playfair Display", "Georgia", serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.lotusSubtitle {
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 4px;
+  margin: 0;
+  opacity: 0.95;
+  text-transform: uppercase;
+}
+
+/* Added open book layout for large screens */
+.bookContainer {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.lotusMenuContent {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Book layout for large screens */
+@media (min-width: 1200px) {
+  .lotusMenuContent {
+    flex-direction: row;
+    gap: 0;
+    padding: 60px 20px;
+    align-items: flex-start;
+  }
+
+  .leftPage,
+  .rightPage {
+    flex: 1;
+    padding: 40px;
+    background: #ffffff;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    min-height: 100vh;
+  }
+
+  .leftPage {
+    border-radius: 12px 0 0 12px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1), inset -10px 0 20px rgba(0, 0, 0, 0.03);
+  }
+
+  .rightPage {
+    border-radius: 0 12px 12px 0;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1), inset 10px 0 20px rgba(0, 0, 0, 0.03);
+  }
+
+  .bookSpine {
+    width: 40px;
+    background: linear-gradient(
+      to right,
+      rgba(168, 197, 164, 0.15) 0%,
+      rgba(168, 197, 164, 0.25) 20%,
+      rgba(168, 197, 164, 0.3) 50%,
+      rgba(168, 197, 164, 0.25) 80%,
+      rgba(168, 197, 164, 0.15) 100%
+    );
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .bookSpine::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(168, 197, 164, 0.3) 10%,
+      rgba(168, 197, 164, 0.5) 50%,
+      rgba(168, 197, 164, 0.3) 90%,
+      transparent 100%
+    );
+  }
+
+  /* Adjust section spacing for book layout */
+  .leftPage .lotusMenuSection,
+  .rightPage .lotusMenuSection {
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    padding: 40px 30px;
+  }
+
+  .leftPage .lotusMenuSection::before,
+  .rightPage .lotusMenuSection::before {
+    display: none;
+  }
+}
+
+.lotusMenuSection {
+  margin-bottom: 80px;
+  background: #ffffff;
+  padding: 50px 60px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(168, 197, 164, 0.12);
+  border: 1px solid #e8dfd0;
+  position: relative;
+}
+
+.lotusMenuSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, #a8c5a4, #c8dfc4, #a8c5a4);
+  border-radius: 12px 12px 0 0;
+}
+
+.lotusSectionTitle {
+  font-size: 42px;
+  font-weight: 400;
+  color: #6b9168;
+  margin: 0 0 40px 0;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #c8dfc4;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-family: "Playfair Display", "Georgia", serif;
+  text-align: center;
+}
+
+.lotusMenuItems {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.lotusMenuItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 0;
+  border-bottom: 1px dotted #d8cdb8;
+  transition: all 0.3s ease;
+}
+
+.lotusMenuItem:last-child {
+  border-bottom: none;
+}
+
+/* Updated hover effect with lighter colors */
+.lotusMenuItem:hover {
+  background: #f9f7f3;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: -15px;
+  margin-right: -15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(168, 197, 164, 0.1);
+}
+
+.lotusItemInfo {
+  flex: 1;
+  padding-right: 30px;
+}
+
+.lotusItemName {
+  font-size: 22px;
+  font-weight: 600;
+  color: #5a7358;
+  margin: 0 0 8px 0;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+}
+
+.lotusItemDescription {
+  font-size: 16px;
+  color: #7a9478;
+  margin: 6px 0 0 0;
+  line-height: 1.6;
+  font-style: italic;
+  font-family: "Georgia", serif;
+}
+
+.lotusItemNote {
+  font-size: 15px;
+  color: #8ba889;
+  margin: 10px 0 0 0;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.lotusItemPrice {
+  font-size: 26px;
+  font-weight: 600;
+  color: #6b9168;
+  white-space: nowrap;
+  min-width: 100px;
+  text-align: right;
+  font-family: "Georgia", serif;
+}
+
+.lotusItemPrice sup {
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 2px;
+}
+
+/* Updated footer with lighter colors */
+.lotusMenuFooter {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #a8c5a4 0%, #b8d4b4 100%);
+  color: #ffffff;
+  border-top: 4px solid #d4e5d2;
+  margin-top: 60px;
+}
+
+.lotusMenuFooter p {
+  margin: 8px 0;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.lotusMenuFooter p:first-child {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .lotusIcon {
+    width: 90px;
+    height: 68px;
+  }
+
+  .lotusTitle {
+    font-size: 48px;
+    letter-spacing: 8px;
+  }
+
+  .lotusSubtitle {
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+
+  /* Stack pages vertically on mobile */
+  .bookContainer {
+    padding: 0;
+  }
+
+  .lotusMenuContent {
+    padding: 40px 20px;
+    flex-direction: column;
+  }
+
+  .leftPage,
+  .rightPage {
+    padding: 0;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .bookSpine {
+    display: none;
+  }
+
+  .lotusMenuSection {
+    padding: 35px 25px;
+    margin-bottom: 50px;
+  }
+
+  .lotusSectionTitle {
+    font-size: 32px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+  }
+
+  .lotusMenuItem {
+    flex-direction: column;
+    gap: 12px;
+    padding: 18px 0;
+  }
+
+  .lotusItemInfo {
+    padding-right: 0;
+  }
+
+  .lotusItemName {
+    font-size: 20px;
+  }
+
+  .lotusItemDescription {
+    font-size: 15px;
+  }
+
+  .lotusItemPrice {
+    font-size: 24px;
+    text-align: left;
+    min-width: auto;
+  }
+
+  .lotusMenuFooter {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lotusIcon {
+    width: 70px;
+    height: 53px;
+  }
+
+  .lotusTitle {
+    font-size: 36px;
+    letter-spacing: 6px;
+  }
+
+  .lotusMenuHeader {
+    padding: 40px 15px 30px;
+  }
+
+  .lotusMenuSection {
+    padding: 25px 20px;
+  }
+
+  .lotusSectionTitle {
+    font-size: 26px;
+    letter-spacing: 1.5px;
+  }
+
+  .lotusItemName {
+    font-size: 18px;
+  }
+
+  .lotusItemDescription {
+    font-size: 14px;
+  }
+
+  .lotusItemPrice {
+    font-size: 22px;
+  }
+}

@@ -59,11 +59,15 @@ const Nav = ({ onNavigate }) => {
         </ul>
 
         {/* Mobile Menu Button */}
-        <div className="hamburger" onClick={toggleMenu}>
+        <div 
+          className={`hamburger ${isMenuOpen ? 'active' : ''}`} 
+          onClick={toggleMenu}
+        >
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
         </div>
+
       </div>
     </nav>
   );

@@ -290,7 +290,7 @@ export function SpecialtiesSection({ onNavigate }) {
           <div className="ct-wrapper">
             <button
               type="button"
-              className="ct-button"
+              className="ct-button-menu"
               onClick={() => {
                 if (onNavigate) onNavigate('menu')
                 if (typeof window !== 'undefined') window.scrollTo({ top: 0 })

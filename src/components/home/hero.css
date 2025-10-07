@@ -46,7 +46,7 @@
   padding: 0 20px;
   z-index: 5; /* keep overlay above slides */
   pointer-events: auto;
- } /* ensure overlay and its children are interactive */
+ } 
 .hero-title {
   font-size: 4rem;
   margin-bottom: 20px;
@@ -76,6 +76,9 @@
   opacity: 0;
   transform: translateY(50px);
   animation: fadeInUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0.9s forwards;
+  user-select: none;
+  pointer-events: auto;
+
 }
 
 
@@ -224,25 +227,47 @@
   justify-content: center;
   width: 160px;
   padding: 16px 32px;
-  background-color: #e0e0e0;
-  color: #333;
-  border: none;
-  border-radius: 25px;
-  font-size: 18px;
-  font-weight: 600;
+  color: #244313;
+  border: 2px solid #244313;
+  font-size: 20px;
+  font-weight: 700;
   cursor: pointer;
   overflow: hidden;
+  background: rgba(22, 19, 19, 0.04);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 999px;
+  border: 2px solid #244313;
 }
 .hero-btn:active{
   user-select:none;
   touch-action: manipulation;
 }
 
-.hero-btn:hover{
-  background-color: #d0d0d0;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+.hero-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #244313; /* color of the hover fill */
+  z-index: 0;
+  transition: width 0.4s ease; /* smooth animation */
+  border-radius: 25px;
 }
-
+.hero-btn:hover::before {
+  width: 100%;
+}
+.hero-btn span {
+  position: relative;
+  z-index: 1;
+  color: #244313;
+  transition: color 0.4s ease;
+}
+.hero-btn:hover span, .hero-btn:hover ion-icon {
+  color: #fff;
+}
 
 .hero-btn .text {
   transition: all 0.4s ease;

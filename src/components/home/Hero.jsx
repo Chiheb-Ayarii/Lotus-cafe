@@ -77,7 +77,7 @@ const Hero = ({ onNavigate }) => {
           <button className="hero-btn" onClick={() => {
                 if (onNavigate) onNavigate('menu')
                 if (typeof window !== 'undefined') window.scrollTo({ top: 0})
-              }}>Menu <ion-icon name="chevron-forward-outline"></ion-icon></button>
+              }}> <span>Menu</span> <ion-icon name="chevron-forward-outline"></ion-icon></button>
           <button className="hero-btn" onClick={() => {
                 // navigate to home page then scroll to reservations section
                 if (onNavigate) onNavigate('home')
@@ -89,7 +89,7 @@ const Hero = ({ onNavigate }) => {
                     if (el) el.scrollIntoView({ behavior: 'smooth' })
                   }, 300)
                 }
-              }}>Reservation</button>
+              }}> <span>Reservation</span></button>
         </div>
       </div>
       

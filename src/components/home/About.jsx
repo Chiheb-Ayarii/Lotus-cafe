@@ -55,7 +55,7 @@ export function AboutSection({ onNavigate }) {
               <div className="feature-card">
                 <Award className="feature-icon" />
                 <h4 className="feature-title">Qualité Premium</h4>
-                <p className="feature-description">Grains triés sur le volet provenant des meilleures régions caféières</p>
+                <p className="feature-description">Parce que l'excellence n'est pas une option, mais une évidence.</p>
               </div>
               <div className="feature-card">
                 <Heart className="feature-icon" />
@@ -70,25 +70,25 @@ export function AboutSection({ onNavigate }) {
             <div className="images-grid">
               <div className="images-column">
                 <img
-                  src="https://cdn.mos.cms.futurecdn.net/3qWuZGoVrpnHkS25FJJViM.jpg"
-                  alt="Préparation du café"
+                  src="./public/lotusabout/coffee.jpg"
+                  alt="café"
                   className="image-large"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400&h=300&fit=crop"
-                  alt="Grains de café"
+                  src="./public/lotusabout/lotus_team.jpg"
+                  alt="Equipe"
                   className="image-small"
                 />
               </div>
               <div className="images-column images-column-offset">
                 <img
-                  src="https://sensoryzero.coffee/cdn/shop/files/s0ChocolatyBlendCoffeeBean1kg.jpg?v=1724913972&width=1445"
-                  alt="Paquet de café"
+                  src="./public/lotusabout/lotus.jpg"
+                  alt="Intérieur du café"
                   className="image-small"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&h=400&fit=crop"
-                  alt="Intérieur du café"
+                  src="./public/lotusabout/food.jpg"
+                  alt="Nourriture"
                   className="image-large"
                 />
               </div>

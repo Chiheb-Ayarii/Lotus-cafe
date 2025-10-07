@@ -4,18 +4,18 @@ import "./hero.css";
 const slides = [
   {
     image: "./src/assets/hero.png",
-    title: "Delicious Dishes",
-    description: "Experience authentic cuisine crafted with passion and the finest ingredients."
+    title: "Plats Délicieux",
+    description: "Découvrez une cuisine authentique préparée avec passion et les meilleurs ingrédients."
   },
   {
     image: "./src/assets/hero2.png",
-    title: "Cozy Atmosphere",
-    description: "Relax and dine in our warm, inviting space designed for your comfort."
+    title: "Ambiance Conviviale",
+    description: "Détendez-vous et dînez dans notre espace chaleureux conçu pour votre confort."
   },
   {
     image: "./src/assets/hero3.png",
-    title: "Fresh Ingredients",
-    description: "Daily sourced farm-to-table ingredients for exceptional flavor."
+    title: "Ingrédients Frais",
+    description: "Des produits de la ferme à notre table, sourcés quotidiennement pour une saveur exceptionnelle."
   }
 ];
 

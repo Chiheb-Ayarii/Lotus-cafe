@@ -108,7 +108,7 @@ const menuData = {
       }
     ]
   },
-  "THÉS & CITRONNADES": {
+  "THÉS, CITRONNADES & SOFT DRINKS": {
     sections: [
       {
         title: "THÉS TRADITIONNELS",
@@ -262,7 +262,7 @@ const menuData = {
       }
     ]
   },
-  "SANDWICHS & BURGERS": {
+  "SANDWICHS, BURGERS & TACOS": {
     sections: [
       {
         title: "SANDWICHS CIABATTA",
@@ -295,7 +295,7 @@ const menuData = {
       }
     ]
   },
-  "PIZZAS & TACOS": {
+  "PIZZAS & OJJAS": {
     sections: [
       {
         title: "PIZZAS ARTISANALES",
@@ -323,7 +323,7 @@ const menuData = {
       }
     ]
   },
-  "CRÊPES & DOUCEURS": {
+  "SALADES & CRÊPES SALÉES": {
     sections: [
       {
         title: "CRÊPES SALÉES",
@@ -363,7 +363,7 @@ const menuData = {
       }
     ]
   },
-  "DESSERTS & CHICHAS": {
+  "CHICHAS & FOUNDCHARES": {
     sections: [
       {
         title: "DESSERTS MAISON",

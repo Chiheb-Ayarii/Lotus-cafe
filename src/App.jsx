@@ -13,10 +13,25 @@ function App() {
   const [activePage, setActivePage] = useState('home')
   const [selectedCategory, setSelectedCategory] = useState(null)
 
-  const handleNavigate = (page) => {
+  // central navigate function: updates state and URL hash
+  const handleNavigate = (page, opts = {}) => {
+    // update local state
     setActivePage(page)
     if (page !== 'menuDetail') {
       setSelectedCategory(null)
+    }
+
+    // update URL hash to allow back/forward and refresh-preserve
+    try {
+      if (opts && opts.category) {
+        const encoded = encodeURIComponent(opts.category)
+        // use a simple query-style within the hash
+        window.location.hash = `${page}?cat=${encoded}`
+      } else {
+        window.location.hash = page
+      }
+    } catch (e) {
+      // ignore for server-side renders or restricted environments
     }
   }
 
@@ -27,9 +42,37 @@ function App() {
     }
   }, [activePage])
 
+  // on mount: read hash to set initial page, and listen for hash changes
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+
+    const parseHash = () => {
+      const raw = window.location.hash.replace(/^#/, '') || 'home'
+      // support optional query param after ? (e.g. menuDetail?cat=xyz)
+      const [pagePart, queryPart] = raw.split('?')
+      if (pagePart) {
+        setActivePage(pagePart)
+      }
+      if (queryPart) {
+        const params = new URLSearchParams(queryPart)
+        const cat = params.get('cat')
+        if (cat) setSelectedCategory(decodeURIComponent(cat))
+      }
+    }
+
+    // parse hash on initial load
+    parseHash()
+
+    // update when back/forward or other hash changes happen
+    const onHashChange = () => parseHash()
+    window.addEventListener('hashchange', onHashChange)
+    return () => window.removeEventListener('hashchange', onHashChange)
+  }, [])
+
   const handleViewCategory = (category) => {
     setSelectedCategory(category)
-    setActivePage('menuDetail')
+    // navigate and include category in the hash so refresh/back preserves it
+    handleNavigate('menuDetail', { category })
   }
 
   let PageComponent

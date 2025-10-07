@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react"
 import "./Menu.css"
 
-export default function Lotusmenu({ onViewMore }) {
+export default function Lotusmenu({ onViewMore, onNavigate }) {
   const sectionsRef = useRef([])
 
   useEffect(() => {
@@ -31,7 +31,7 @@ const menuCategories = [
         subtitle: "Commencez Votre Journée en Douceur",
         description:
                   "Découvrez nos formules petit-déjeuner soigneusement préparées pour bien commencer la journée. Des options simples aux brunchs complets, il y en a pour tous les appétits et tous les moments.",
-        image: "/src/assets/gallerie/gal1.png",
+        image: "./public/menuphotos/petits dej et brunchs.png",
         align: "left",
     },
     {
@@ -39,7 +39,7 @@ const menuCategories = [
         subtitle: "L'Art de la Torréfaction et du Chocolat",
         description:
             "Des grains soigneusement sélectionnés et des préparations maîtrisées pour révéler toutes les subtilités de l'arôme, du classique espresso aux créations les plus gourmandes.",
-        image: "/src/assets/gallerie/gal2.png",
+        image: "./public/menuphotos/cafes et boissons chaudes.png",
         align: "right",
     },
     {
@@ -47,7 +47,7 @@ const menuCategories = [
         subtitle: "Élégance et Fraîcheur Infusées",
         description:
             "Des breuvages qui marient tradition et modernité, des thés parfumés aux citronnades vivifiantes, pour une pause rafraîchissante à tout moment de la journée.",
-        image: "/src/assets/gallerie/gal3.png",
+        image: "./public/menuphotos/thes citronnades et soft drinks.png",
         align: "left",
     },
     {
@@ -55,7 +55,7 @@ const menuCategories = [
         subtitle: "Vitalité et Fraîcheur à Chaque Gorgée",
         description:
             "Des fruits frais pressés à la commande, des smoothies onctueux et des créations originales pour faire le plein de vitamines et de saveurs naturelles.",
-        image: "/src/assets/gallerie/gal4.png",
+        image: "./public/menuphotos/boissons fraiches et smoothies.png",
         align: "right",
     },
     {
@@ -63,7 +63,7 @@ const menuCategories = [
         subtitle: "Savoureuses Créations Culinaires",
         description:
             "Une cuisine généreuse qui marie tradition italienne et influences méditerranéennes, des pâtes al dente aux plats composés, pour un repas complet et satisfaisant.",
-        image: "/src/assets/gallerie/gal5.png",
+        image: "./public/menuphotos/plats et pates.png",
         align: "left",
     },
     {
@@ -71,7 +71,7 @@ const menuCategories = [
         subtitle: "Gourmandises à Emporter ou sur Place",
         description:
             "Du pain frais, des garnitures généreuses et des associations savoureuses pour un repas rapide mais jamais ordinaire, entre tradition et modernité.",
-        image: "/src/assets/gallerie/gal6.png",
+        image: "./public/menuphotos/sandwichs burgers et tacos.png",
         align: "right",
     },
     {
@@ -79,7 +79,7 @@ const menuCategories = [
         subtitle: "Partage et Convivialité",
         description:
             "La fine fleur de la cuisine de partage, des pizzas à la pâte fine et croustillante aux ojjas brûlants et parfumés, pour des moments de complicité gustative.",
-        image: "/src/assets/gallerie/gal7.png",
+        image: "./public/menuphotos/Pizzas et ojjas.png",
         align: "left",
     },
     {
@@ -87,7 +87,7 @@ const menuCategories = [
         subtitle: "Fraîcheur et Équilibre",
         description:
             "Découvrez nos sandwichs signature préparés avec des ingrédients frais et savoureux, offrant un équilibre parfait entre textures et goûts. Parfaits pour un déjeuner rapide ou un repas léger.",
-        image: "/src/assets/gallerie/gal8.png",
+        image: "./public/menuphotos/salades et crepes salees.png",
         align: "right",
     },
     {
@@ -95,7 +95,7 @@ const menuCategories = [
         subtitle: "La Note Sucrée Parfaite",
         description:
             "Savourez nos soupes maison, préparées avec des ingrédients frais et de qualité. Chaque cuillère vous offre un moment de réconfort, parfait pour vous réchauffer et vous ressourcer.",
-        image: "/src/assets/gallerie/gal9.png",
+        image: "./public/menuphotos/crepes et pancake.png",
         align: "left",
     },
     {
@@ -103,7 +103,7 @@ const menuCategories = [
         subtitle: "Ambiance et Détente",
         description:
             "Nos bowls énergétiques combinent protéines, légumes frais et grains anciens pour un repas complet et équilibré. Parfaits pour les amateurs de cuisine saine et savoureuse.",
-        image: "/src/assets/gallerie/gal10.png",
+        image: "./public/menuphotos/chicha.png",
         align: "right",
     },
 ]
@@ -120,7 +120,7 @@ const menuCategories = [
         <button
             className="voir-plus-btn Fullmenu"
             onClick={() => {
-              if (onViewMore) onViewMore(category.title)
+              if (onNavigate) onNavigate('fullmenu')
               if (typeof window !== 'undefined') window.scrollTo({ top: 0 })
             }}
           >
@@ -152,7 +152,22 @@ const menuCategories = [
                  VOIR PLUS
                </button>
             </div>
+
+            {/* small modern green separator under each category */}
+            <div
+              className="category-separator"
+              style={{
+                width: "80%",
+                maxWidth: "150px",
+                height: 0,
+                borderTop: "2px solid #27ae60",
+                margin: "16px auto 4px",
+                borderRadius: "2px",
+                opacity: 0.95,
+              }}
+            />
           </div>
+          
         ))}
       </div>
     </div>

@@ -1,5 +1,6 @@
 import styles from "./fullmenu.module.css"
 
+
 export default function LotusCafeMenuPage() {
   return (
     <div className={styles.lotusMenuContainer}>

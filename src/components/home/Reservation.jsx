@@ -48,25 +48,25 @@ export default function ReservationSection() {
     let isValid = true
 
     if (!formData.name.trim()) {
-      newErrors.name = "Name is required"
+      newErrors.name = "Le nom est requis"
       isValid = false
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = "Email is required"
+      newErrors.email = "L'email est requis"
       isValid = false
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = "Email is invalid"
+      newErrors.email = "L'email est invalide"
       isValid = false
     }
 
     if (!formData.date) {
-      newErrors.date = "Date is required"
+      newErrors.date = "La date est requise"
       isValid = false
     }
 
     if (!formData.time) {
-      newErrors.time = "Time is required"
+      newErrors.time = "L'heure est requise"
       isValid = false
     }
 
@@ -81,17 +81,17 @@ export default function ReservationSection() {
     
     setIsSubmitting(true)
     
-    const message = `Hello! I would like to make a reservation at Lotus Coffee House:
+    const message = `Bonjour ! Je souhaite faire une réservation au Lotus Coffee House :
     
-Name: ${formData.name}
-Email: ${formData.email}
-Phone: ${formData.phone}
-Date: ${formData.date}
-Time: ${formData.time}
-Number of Guests: ${formData.guests}
-${formData.specialRequests ? `Special Requests: ${formData.specialRequests}` : ''}
+Nom : ${formData.name}
+Email : ${formData.email}
+Téléphone : ${formData.phone}
+Date : ${formData.date}
+Heure : ${formData.time}
+Nombre de personnes : ${formData.guests}
+${formData.specialRequests ? `Demandes spéciales : ${formData.specialRequests}` : ''}
 
-Please confirm my reservation. Thank you!`
+Merci de confirmer ma réservation.`
 
     const encodedMessage = encodeURIComponent(message)
     const whatsappUrl = `https://wa.me/15551234567?text=${encodedMessage}`
@@ -110,22 +110,22 @@ Please confirm my reservation. Thank you!`
     
     setIsSubmitting(true)
     
-    const subject = `Reservation Request - ${formData.name}`
-    const body = `Dear Lotus Coffee House,
+    const subject = `Demande de réservation - ${formData.name}`
+    const body = `Bonjour Lotus Coffee House,
 
-I would like to make a reservation with the following details:
+Je souhaite faire une réservation avec les informations suivantes :
 
-Name: ${formData.name}
-Email: ${formData.email}
-Phone: ${formData.phone}
-Date: ${formData.date}
-Time: ${formData.time}
-Number of Guests: ${formData.guests}
-${formData.specialRequests ? `Special Requests: ${formData.specialRequests}` : ''}
+Nom : ${formData.name}
+Email : ${formData.email}
+Téléphone : ${formData.phone}
+Date : ${formData.date}
+Heure : ${formData.time}
+Nombre de personnes : ${formData.guests}
+${formData.specialRequests ? `Demandes spéciales : ${formData.specialRequests}` : ''}
 
-Please confirm my reservation at your earliest convenience.
+Veuillez confirmer ma réservation dès que possible.
 
-Thank you,
+Merci,
 ${formData.name}`
 
     const encodedSubject = encodeURIComponent(subject)
@@ -161,25 +161,25 @@ ${formData.name}`
       <div className="reservation-container">
         {/* Section Header */}
         <div className="reservation-header">
-          <p className="reservation-decorative">Book Your Table</p>
+          <p className="reservation-decorative">Réservez votre table</p>
           <div className="reservation-divider">
             <div className="divider-line"></div>
             <Calendar className="divider-icon" />
             <div className="divider-line"></div>
           </div>
           <h2 className="reservation-title">
-            Make a Reservation
+            Réserver une table
           </h2>
           <p className="reservation-description">
-            Secure your spot at Lotus Coffee House. Whether it's for a quiet coffee break, 
-            business meeting, or casual gathering, we'll ensure you have the perfect experience.
+            Assurez votre place au Lotus Café. Que ce soit pour une pause café tranquille,
+            une réunion d'affaires ou un rassemblement convivial, nous vous garantissons une expérience parfaite.
           </p>
         </div>
 
         <div className="reservation-content">
           {/* Left Side - Contact Info */}
           <div className="contact-info-side">
-            <h3 className="contact-title">Why Reserve With Us?</h3>
+            <h3 className="contact-title">Pourquoi réserver chez nous ?</h3>
             
             <div className="benefits-grid">
               <div className="benefit-card">
@@ -187,8 +187,8 @@ ${formData.name}`
                   <CheckCircle />
                 </div>
                 <div className="benefit-content">
-                  <h4>Guaranteed Seating</h4>
-                  <p>Your table will be waiting, no matter how busy we get</p>
+                  <h4>Siège garanti</h4>
+                  <p>Votre table vous attendra, même lors des périodes d'affluence</p>
                 </div>
               </div>
               
@@ -197,8 +197,8 @@ ${formData.name}`
                   <Clock />
                 </div>
                 <div className="benefit-content">
-                  <h4>Priority Service</h4>
-                  <p>Faster service and dedicated attention for reservations</p>
+                  <h4>Service prioritaire</h4>
+                  <p>Service plus rapide et attention dédiée pour les réservations</p>
                 </div>
               </div>
               
@@ -207,8 +207,8 @@ ${formData.name}`
                   <Users />
                 </div>
                 <div className="benefit-content">
-                  <h4>Group Friendly</h4>
-                  <p>Perfect for groups, meetings, and special occasions</p>
+                  <h4>Adapté aux groupes</h4>
+                  <p>Parfait pour les groupes, les réunions et les occasions spéciales</p>
                 </div>
               </div>
               
@@ -217,14 +217,14 @@ ${formData.name}`
                   <Calendar />
                 </div>
                 <div className="benefit-content">
-                  <h4>Flexible Booking</h4>
-                  <p>Easy online booking with instant confirmation</p>
+                  <h4>Réservation flexible</h4>
+                  <p>Réservation en ligne facile avec confirmation instantanée</p>
                 </div>
               </div>
             </div>
 
             <div className="contact-details">
-              <h4 className="contact-subtitle">Need Help?</h4>
+              <h4 className="contact-subtitle">Besoin d'aide ?</h4>
               <div className="contact-methods">
                 <div className="contact-method">
                   <Phone className="contact-icon" />
@@ -242,12 +242,12 @@ ${formData.name}`
             </div>
 
             <div className="reservation-policy">
-              <h4 className="policy-title">Reservation Policy</h4>
+              <h4 className="policy-title">Politique de réservation</h4>
               <ul className="policy-list">
-                <li>Reservations held for 15 minutes past booking time</li>
-                <li>Groups of 6+ require 24 hours notice for cancellation</li>
-                <li>Special requests subject to availability</li>
-                <li>Contact us for events larger than 8 people</li>
+                <li>Les réservations sont maintenues 15 minutes après l'heure de réservation</li>
+                <li>Les groupes de 6+ nécessitent un préavis de 24 heures pour l'annulation</li>
+                <li>Les demandes spéciales sont soumises à disponibilité</li>
+                <li>Contactez-nous pour des événements de plus de 8 personnes</li>
               </ul>
             </div>
           </div>
@@ -257,16 +257,16 @@ ${formData.name}`
             {isSubmitted ? (
               <div className="success-message">
                 <CheckCircle className="success-icon" />
-                <h3>Reservation Confirmed!</h3>
-                <p>Thank you, {formData.name}. Your table for {formData.guests} on {formData.date} at {formData.time} has been reserved.</p>
-                <p className="success-note">We've sent a confirmation to {formData.email}</p>
+                <h3>Réservation confirmée !</h3>
+                <p>Merci, {formData.name}. Votre table pour {formData.guests} le {formData.date} à {formData.time} a été réservée.</p>
+                <p className="success-note">Nous avons envoyé une confirmation à {formData.email}</p>
               </div>
             ) : (
               <form className="reservation-form">
                 <div className="form-row">
                   <div className="form-group">
                     <label htmlFor="name" className="form-label">
-                      Full Name *
+                      Nom complet *
                     </label>
                     <input
                       type="text"
@@ -275,7 +275,7 @@ ${formData.name}`
                       value={formData.name}
                       onChange={handleChange}
                       className={`form-input ${errors.name ? 'error' : ''}`}
-                      placeholder="Enter your full name"
+                      placeholder="Entrez votre nom complet"
                     />
                     {errors.name && <span className="error-message">{errors.name}</span>}
                   </div>
@@ -284,7 +284,7 @@ ${formData.name}`
                 <div className="form-row">
                   <div className="form-group">
                     <label htmlFor="email" className="form-label">
-                      Email Address *
+                      Adresse e-mail *
                     </label>
                     <input
                       type="email"
@@ -293,13 +293,13 @@ ${formData.name}`
                       value={formData.email}
                       onChange={handleChange}
                       className={`form-input ${errors.email ? 'error' : ''}`}
-                      placeholder="your@email.com"
+                      placeholder="votre@email.com"
                     />
                     {errors.email && <span className="error-message">{errors.email}</span>}
                   </div>
                   <div className="form-group">
                     <label htmlFor="phone" className="form-label">
-                      Phone Number
+                      Numéro de téléphone
                     </label>
                     <input
                       type="tel"
@@ -333,7 +333,7 @@ ${formData.name}`
                   <div className="form-group">
                     <label htmlFor="time" className="form-label">
                       <Clock className="label-icon" />
-                      Time *
+                      Heure *
                     </label>
                     <select
                       id="time"
@@ -342,7 +342,7 @@ ${formData.name}`
                       onChange={handleChange}
                       className={`form-input ${errors.time ? 'error' : ''}`}
                     >
-                      <option value="">Select time</option>
+                      <option value="">Sélectionner l'heure</option>
                       {timeSlots.map(time => (
                         <option key={time} value={time}>
                           {time}
@@ -357,7 +357,7 @@ ${formData.name}`
                   <div className="form-group">
                     <label htmlFor="guests" className="form-label">
                       <Users className="label-icon" />
-                      Number of Guests *
+                      Nombre de personnes *
                     </label>
                     <div className="guest-buttons">
                       {guestOptions.map(guest => (
@@ -376,7 +376,7 @@ ${formData.name}`
 
                 <div className="form-group">
                   <label htmlFor="specialRequests" className="form-label">
-                    Special Requests
+                    Demandes spéciales
                   </label>
                   <textarea
                     id="specialRequests"
@@ -384,7 +384,7 @@ ${formData.name}`
                     value={formData.specialRequests}
                     onChange={handleChange}
                     className="form-textarea"
-                    placeholder="Any special requirements, allergies, or occasion details..."
+                    placeholder="Toutes exigences particulières, allergies ou détails de l'occasion..."
                     rows={4}
                   />
                 </div>
@@ -399,12 +399,12 @@ ${formData.name}`
                     {isSubmitting ? (
                       <>
                         <div className="spinner"></div>
-                        Processing...
+                        Traitement...
                       </>
                     ) : (
                       <>
                         <MessageCircle className="button-icon" />
-                        Reserve via WhatsApp
+                        Réserver via WhatsApp
                       </>
                     )}
                   </button>
@@ -418,19 +418,19 @@ ${formData.name}`
                     {isSubmitting ? (
                       <>
                         <div className="spinner"></div>
-                        Processing...
+                        Traitement...
                       </>
                     ) : (
                       <>
                         <Mail className="button-icon" />
-                        Reserve via Email
+                        Réserver par e-mail
                       </>
                     )}
                   </button>
                 </div>
 
                 <p className="form-note">
-                  * Required fields. We'll contact you to confirm your reservation.
+                  * Champs obligatoires. Nous vous contacterons pour confirmer votre réservation.
                 </p>
               </form>
             )}

@@ -56,8 +56,9 @@ export default function Footer({ onNavigate }) {
             </div>
 
             <p className="brand-description">
-              Where exceptional coffee meets tranquil ambiance. Experience the art of coffee
-              crafted with passion and served with love.
+              Où une cuisine savoureuse rencontre un café d'exception, 
+              le tout dans une ambiance paisible. 
+              Découvrez l'art de la table et du café, élaborés avec passion et servis avec bienveillance. 
             </p>
 
             <div className="social-links">

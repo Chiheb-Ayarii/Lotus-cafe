@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Nav from './components/nav'
 import Home from './components/Home'
 import LotusAbout from './components/Lotusabout.jsx'
@@ -12,9 +12,21 @@ import Fullmenu from './components/Fullmenu.jsx'
 function App() {
   const [activePage, setActivePage] = useState('home')
   const [selectedCategory, setSelectedCategory] = useState(null)
+  // store scroll positions per page so we can restore when returning
+  const scrollPositions = useRef({})
+  const isInitialLoad = useRef(true)
 
   // central navigate function: updates state and URL hash
   const handleNavigate = (page, opts = {}) => {
+    // save current scroll position for the current active page
+    try {
+      if (typeof window !== 'undefined' && activePage) {
+        scrollPositions.current[activePage] = window.scrollY || window.pageYOffset || 0
+      }
+    } catch (e) {
+      // ignore
+    }
+
     // update local state
     setActivePage(page)
     if (page !== 'menuDetail') {
@@ -68,6 +80,28 @@ function App() {
     window.addEventListener('hashchange', onHashChange)
     return () => window.removeEventListener('hashchange', onHashChange)
   }, [])
+
+  // restore scroll when activePage changes (but not on very first load if there's no saved position)
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+
+    // short delay to allow DOM rendering before scrolling
+    const t = setTimeout(() => {
+      const pos = scrollPositions.current[activePage]
+      if (typeof pos === 'number') {
+        window.scrollTo({ top: pos, behavior: 'auto' })
+      } else {
+        // if no saved position, keep behavior: on first load we already scrolled to top earlier
+        // but for navigations to some pages we may want top:0
+        if (!isInitialLoad.current) {
+          window.scrollTo({ top: 0, behavior: 'smooth' })
+        }
+      }
+      isInitialLoad.current = false
+    }, 50)
+
+    return () => clearTimeout(t)
+  }, [activePage])
 
   const handleViewCategory = (category) => {
     setSelectedCategory(category)

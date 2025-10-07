@@ -6,7 +6,7 @@ const Nav = ({ onNavigate }) => {
 
   const navItems = [
     { name: 'Home', page: 'home' },
-    { name: 'About Us', page: 'about' },
+    { name: 'À propos', page: 'about' },
     { name: 'Galerie', page: 'gallery' },
     { name: 'Menu', page: 'menu' },
     { name: 'Contact', page: 'contact' },

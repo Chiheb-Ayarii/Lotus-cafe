@@ -55,7 +55,7 @@ export function AboutSection({ onNavigate }) {
               <div className="feature-card">
                 <Award className="feature-icon" />
                 <h4 className="feature-title">Qualité Premium</h4>
-                <p className="feature-description">Grains triés sur le volet provenant des meilleures régions caféières</p>
+                <p className="feature-description">Parce que l'excellence n'est pas une option, mais une évidence.</p>
               </div>
               <div className="feature-card">
                 <Heart className="feature-icon" />

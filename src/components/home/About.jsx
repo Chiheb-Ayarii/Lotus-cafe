@@ -15,16 +15,16 @@ export function AboutSection({ onNavigate }) {
       <div className="about-container">
         {/* Section Header */}
         <div className="section-header">
-          <p className="decorative-text">Our Story</p>
+          <p className="decorative-text">Notre Histoire</p>
           <div className="header-divider">
             <div className="divider-line"></div>
             <Coffee className="divider-icon" />
             <div className="divider-line"></div>
           </div>
-          <h2 className="section-title">About Lotus Coffee</h2>
+          <h2 className="section-title">À propos de Lotus Coffee</h2>
           <p className="section-description-text">
-            Lotus Coffee House combines artisan coffee expertise with a serene atmosphere,
-            offering premium blends and exceptional service for an unforgettable experience.
+            Lotus Coffee House allie savoir-faire artisanal et ambiance sereine,
+            proposant des mélanges premium et un service d'exception pour une expérience inoubliable.
           </p>
         </div>
 
@@ -35,18 +35,17 @@ export function AboutSection({ onNavigate }) {
               <div className="content-decoration"></div>
               <div className="content-text">
                 <h3 className="content-title">
-                  Where tradition meets innovation
+                  Où la tradition rencontre l'innovation
                 </h3>
                 <p className="content-paragraph">
-                  The Lotus Coffee House brings together traditional coffee brewing methods
-                  with modern techniques, creating a unique experience that celebrates the
-                  art of coffee in all its forms. Each cup tells a story of passion,
-                  craftsmanship, and dedication to excellence.
+                  Lotus Coffee House réunit les méthodes traditionnelles de préparation du café
+                  et les techniques modernes, créant une expérience unique qui célèbre
+                  l'art du café sous toutes ses formes. Chaque tasse raconte une histoire de passion,
+                  d'artisanat et de quête d'excellence.
                 </p>
                 <p className="content-paragraph">
-                  Our expert baristas source premium beans from sustainable farms worldwide,
-                  ensuring every cup delivers rich flavors and aromatic bliss that awakens
-                  the senses and nourishes the soul.
+                  Nos baristas experts sélectionnent des grains d'exception issus de plantations durables,
+                  garantissant à chaque tasse des arômes riches qui éveillent les sens et réconfortent l'âme.
                 </p>
               </div>
             </div>
@@ -55,13 +54,13 @@ export function AboutSection({ onNavigate }) {
             <div className="features-grid">
               <div className="feature-card">
                 <Award className="feature-icon" />
-                <h4 className="feature-title">Premium Quality</h4>
-                <p className="feature-description">Hand-selected beans from the world's finest coffee regions</p>
+                <h4 className="feature-title">Qualité Premium</h4>
+                <p className="feature-description">Grains triés sur le volet provenant des meilleures régions caféières</p>
               </div>
               <div className="feature-card">
                 <Heart className="feature-icon" />
-                <h4 className="feature-title">Made with Love</h4>
-                <p className="feature-description">Every cup crafted with passion and attention to detail</p>
+                <h4 className="feature-title">Fait avec amour</h4>
+                <p className="feature-description">Chaque tasse préparée avec passion et attention au détail</p>
               </div>
             </div>
           </div>
@@ -72,24 +71,24 @@ export function AboutSection({ onNavigate }) {
               <div className="images-column">
                 <img
                   src="https://cdn.mos.cms.futurecdn.net/3qWuZGoVrpnHkS25FJJViM.jpg"
-                  alt="Coffee preparation"
+                  alt="Préparation du café"
                   className="image-large"
                 />
                 <img
                   src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400&h=300&fit=crop"
-                  alt="Coffee beans"
+                  alt="Grains de café"
                   className="image-small"
                 />
               </div>
               <div className="images-column images-column-offset">
                 <img
                   src="https://sensoryzero.coffee/cdn/shop/files/s0ChocolatyBlendCoffeeBean1kg.jpg?v=1724913972&width=1445"
-                  alt="Coffee package"
+                  alt="Paquet de café"
                   className="image-small"
                 />
                 <img
                   src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&h=400&fit=crop"
-                  alt="Coffee shop interior"
+                  alt="Intérieur du café"
                   className="image-large"
                 />
               </div>
@@ -311,48 +310,42 @@ const testimonials = [
   {
     id: 1,
     name: "Sarah Chen",
-    role: "Coffee Enthusiast",
     rating: 5,
-    text: "Lotus Coffee House is my sanctuary. The ambiance is perfect for both work and relaxation, and their signature latte is simply divine. The baristas truly know their craft.",
+    text: "Had a fantastic lunch here! The food was delicious, and the staff were incredibly welcoming and helpful. Highly recommend this place!",
     image: "https://images.unsplash.com/photo-1494790108755-2616b612b1b3?w=150&h=150&fit=crop&crop=faces&auto=format"
   },
   {
     id: 2,
-    name: "Marcus Rodriguez",
-    role: "Local Business Owner",
+    name: "Samar Ben haj ali",
     rating: 5,
-    text: "I've tried coffee shops around the world, but Lotus stands out. Their attention to detail in every cup and the warm, welcoming atmosphere make it my go-to meeting spot.",
+    text: "A nice place to chat and have a good time. The atmosphere is calm and pleasant. Ideal for an outing with friends.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
   },
   {
     id: 3,
-    name: "Emma Thompson",
-    role: "Food Blogger",
-    rating: 5,
-    text: "The pour-over experience at Lotus is unmatched. Each cup tells a story, and the staff's knowledge about coffee origins and brewing methods is impressive. A true gem!",
+    name: "Ameur ZAMMOURI",
+    rating: 4,
+    text: "Very clean, cozy, and friendly.",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
   },
   {
     id: 4,
-    name: "David Kim",
-    role: "University Student",
+    name: "Lina Miled",
     rating: 5,
     text: "Perfect study spot with amazing coffee. The WiFi is reliable, the environment is peaceful, and their cold brew keeps me energized throughout my study sessions.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
   },
   {
     id: 5,
-    name: "Isabella Martinez",
-    role: "Artist",
+    name: "Mohamed Amine",
     rating: 5,
     text: "Lotus inspires creativity. The beautiful interior design and exceptional coffee create the perfect atmosphere for my art. Their seasonal specials are always delightful surprises.",
     image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&h=150&fit=crop&crop=face"
   },
   {
     id: 6,
-    name: "Robert Johnson",
-    role: "Coffee Connoisseur",
-    rating: 5,
+    name: "Wissem Sahli",
+    rating: 4,
     text: "Finally found a place that respects coffee as much as I do. The single-origin selections are exceptional, and the brewing methods showcase each bean's unique character.",
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
   }
@@ -473,27 +466,27 @@ export function TestimonialsSection({ onNavigate }) {
         {/* Stats Grid */}
         <div className="stats-grid">
           <div className="stat-item">
-            <div className="stat-number">4.9★</div>
-            <p className="stat-label">Average Rating</p>
+            <div className="stat-number">4.3★</div>
+            <p className="stat-label">Note moyenne</p>
           </div>
           <div className="stat-item">
-            <div className="stat-number">500+</div>
-            <p className="stat-label">Happy Reviews</p>
+            <div className="stat-number">100+</div>
+            <p className="stat-label">clients Heureux</p>
           </div>
           <div className="stat-item">
-            <div className="stat-number">98%</div>
-            <p className="stat-label">Satisfaction Rate</p>
+            <div className="stat-number">95%</div>
+            <p className="stat-label">Satisfaction des clients</p>
           </div>
           <div className="stat-item">
             <div className="stat-number">24/7</div>
-            <p className="stat-label">Customer Support</p>
+            <p className="stat-label">assistance client</p>
           </div>
         </div>
 
         {/* Call to Action */}
         <div className="ct-container">
           <h3 className="ct-title">
-            Ready to create your own coffee story?
+            Découvrez l'expérience de Lotus dès maintenant !
           </h3>
           <button
             type="button"

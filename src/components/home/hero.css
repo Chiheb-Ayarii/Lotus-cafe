@@ -23,9 +23,20 @@
   will-change: opacity, transform, filter;
 }
 
+/* dark overlay to make text readable on top of images */
+.slide::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35); /* default subtle darkening */
+  transition: background 0.4s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
 .slide.active {
   /* remove blur when the slide becomes active */
-  filter: blur(3px) !important;
+  filter: blur(0px) !important;
 }
 .slide.active {
   opacity: 1;
@@ -34,6 +45,9 @@
               transform 8s cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: auto; /* only active slide should receive pointer events */
   z-index: 2; /* Higher z-index to ensure active is on top */
+}
+.slide.active::before{
+  background: rgba(0,0,0,0.55); /* stronger darkening for active slide */
 }
 .overlay {
   position: absolute;
@@ -44,7 +58,7 @@
   color: white;
   max-width: 600px;
   padding: 0 20px;
-  z-index: 5; /* keep overlay above slides */
+  z-index: 6; /* keep overlay above slides and overlay pseudo-element */
   pointer-events: auto;
  } 
 .hero-title {
@@ -55,7 +69,7 @@
   opacity: 0;
   transform: translateY(50px);
   animation: fadeInUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.6);
   user-select: none;
 }
 .hero-desc {
@@ -66,7 +80,7 @@
   opacity: 0;
   transform: translateY(50px);
   animation: fadeInUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
-  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
   user-select: none;
 }
 .hero-buttons {
@@ -227,8 +241,7 @@
   justify-content: center;
   width: 160px;
   padding: 16px 32px;
-  color: #244313;
-  border: 2px solid #244313;
+  color: #5db52e;
   font-size: 20px;
   font-weight: 700;
   cursor: pointer;
@@ -237,7 +250,7 @@
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border-radius: 999px;
-  border: 2px solid #244313;
+  border: 2px solid #5db52e;
 }
 .hero-btn:active{
   user-select:none;
@@ -262,7 +275,7 @@
 .hero-btn span {
   position: relative;
   z-index: 1;
-  color: #244313;
+  color: #5db52e;
   transition: color 0.4s ease;
 }
 .hero-btn:hover span, .hero-btn:hover ion-icon {

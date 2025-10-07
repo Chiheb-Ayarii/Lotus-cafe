@@ -574,7 +574,7 @@
   border-radius: 50px;
 }
 
-.ct-button {
+.ct-button-menu {
   background-color: #ffffff;
   color: #2c5530;
   padding: 12px 32px;
@@ -586,8 +586,9 @@
   transition: all 0.3s ease;
 }
 
-.ct-button:hover {
+.ct-button-menu:hover {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
 }
 
 .ct-button-icon {

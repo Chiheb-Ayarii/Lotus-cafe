@@ -11,9 +11,6 @@
 }
 
 .back-btn {
-  position: absolute;
-  left: 40px;
-  top: 60px;
   background: transparent;
   border: 1px solid #7a9b76;
   color: #7a9b76;
@@ -23,6 +20,8 @@
   letter-spacing: 1.5px;
   cursor: pointer;
   transition: all 0.3s ease;
+  position: relative;
+  top: -50px;
 }
 
 .back-btn:hover {

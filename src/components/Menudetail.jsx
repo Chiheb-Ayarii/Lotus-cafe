@@ -27,6 +27,26 @@ export default function MenuDetail({ category, onBack }) {
   }, [category])
 
 const menuData = {
+  "DOUCEURS & DESSERTS": {
+    sections: [
+      {
+        title: "DESSERTS MAISON",
+        subtitle: "La note sucrée parfaite",
+        items: [
+          { name: "Fondant au choix", price: "10 DT" },
+          { name: "Cheesecake San Sebastian", price: "15 DT" },
+          { name: "Cheesecakes au choix", price: "13 DT" },
+          { name: "Tiramisu au choix", price: "13 DT" },
+          { name: "Salade de fruits", price: "9 DT" },
+          { name: "Glace duo", price: "9 DT" },
+          { name: "Glace trio", price: "11 DT" },
+          { name: "Banana split", price: "14 DT" },
+          { name: "Mini assiette de fruits", price: "15 DT" },
+          { name: "Maxi assiette de fruits", price: "25 DT" }
+        ]
+      }
+    ]
+  },
   "PETITS DÉJEUNERS & BRUNCH": {
     sections: [
       {
@@ -35,7 +55,7 @@ const menuData = {
         items: [
           { name: "Fast", price: "9 DT", description: "Café, jus au choix, eau 0.5L, viennoiserie" },
           { name: "Fast Gourmand", price: "13 DT", description: "Café, jus au choix, eau 0.5L, viennoiserie, omelette" },
-          { name: "Lotus Rose", price: "20 DT", description: "Café, jus au choix, eau 0.5L, tartines cheddar bacon, œufs brouillés, 3 mini pancakes nutella, pain perdu au miel" },
+          { name: "Lotus Rose", price: "20 DT", description: "Café, jus au choix, eau 0.5L, tartines cheddar bacon de boeuf, œufs brouillés, 3 mini pancakes nutella, pain perdu au miel" },
           { name: "Menu enfant", price: "15 DT", description: "Chocolat au lait, eau 0.5L, bol de céréale, mini pancake chocolat, œufs brouillés, jus au choix" }
         ]
       },
@@ -43,16 +63,16 @@ const menuData = {
         title: "BRUNCH WEEK-END",
         subtitle: "Une expérience gourmande à partager",
         items: [
-          { name: "Brunch (2 personnes)", price: "Sur demande", description: "2 cafés, 2 jus au choix, 2 yaourts, viennoiseries, cakes, assortiment de mini desserts, assiette de charcuterie, croissants salées, brochettes escalopes" }
+          { name: "Brunch (2 personnes)", price: "59", description: "2 cafés, 2 jus au choix, 2 yaourts, viennoiseries, cakes, 2 mini brownies, 2 mini gàteaux, 2 mini cheeecakes, 4 mini pancakes chocolat, toast, miel, confiture, beurre et chocolat, assiette de charcuterie, 2 croissants salées, 2 mini crepes salées, 2 brochettes escalopes" }
         ]
       },
       {
         title: "FORMULES DUO",
         subtitle: "Partage et convivialité",
         items: [
-          { name: "Zemni (2 personnes)", price: "49 DT", description: "2 cafés, 2 jus au choix, 2 cakes, 2 yaourts, toast, chamia, mléwi, assiette gouta, assiette de charcuterie, ojja, 2 brochettes escalopes" },
-          { name: "Le Gourmand (2 personnes)", price: "38 DT", description: "2 cafés, 2 jus au choix, viennoiserie, 2 yaourts, toast, 2 mini gaufres, œufs brouillés, assiette de charcuterie, 2 mini salades de fruits" },
-          { name: "Le Fameux Royale (2 personnes)", price: "Sur demande", description: "2 cafés, 2 jus aux choix, eau 1L, viennoiserie, 2 omelettes fromages légumes, assiette de charcuterie, mini tartines saumon bacon" }
+          { name: "Zemni (2 personnes)", price: "49 DT", description: "2 cafés, 2 jus au choix, 2 cakes, 2 yaourts, toast, chamia, beurre et miel, mléwi, assiette gouta, huile d'olive, thon et harissa, 2 oeufs durs,2 bssissas, assiette de charcuterie, ojja, 2 brochettes escalopes" },
+          { name: "Le Gourmand (2 personnes)", price: "49 DT", description: "2 cafés, 2 jus au choix, viennoiserie ou cake, 2 yaourts, toast, beurre , miel et chocolat, 2 mini gaufres au chocolat, œufs brouillés ou 2 omelettes, assiette de charcuterie, 2 croissants salées, 2 mini salades de fruits, 2 brochettes escalopes" },
+          { name: "Le Fameux Royale (2 personnes)", price: "38 ", description: "2 cafés, 2 jus aux choix, eau 1L, viennoiserie, 2 omelettes aux fromages et légumes, assiette de charcuterie, 6 mini tartines de fromage avec saumon et bacon, 2 mini pancakes aux choix" }
         ]
       }
     ]
@@ -94,7 +114,36 @@ const menuData = {
         ]
       },
       {
-        title: "FRAPPUCCINOS",
+       title: "THÉS TRADITIONNELS",
+        subtitle: "Élégance et fraîcheur infusées",
+        items: [
+          { name: "Thé à la menthe", price: "5 DT" },
+          { name: "Thé aux amandes", price: "8 DT" },
+          { name: "Thé aux pignons", price: "9.5 DT" },
+          { name: "Thé Royal LOTUS", price: "12 DT" },
+          { name: "Thé infusion", price: "6 DT" },
+          { name: "Ice tea", price: "12 DT" }
+        ]
+      }
+    ]
+  },
+  "CITRONNADES & SOFT DRINKS": {
+    sections: [
+      {
+        title: "SOFT DRINKS",
+        subtitle: "Classiques et rafraîchissants",
+        items: [
+          { name: "Sodas", price: "4.5 DT" },
+          { name: "Eaux gazéifiée", price: "4 DT" },
+          { name: "Boissons énergétiques", price: "10 DT" },
+          { name: "Eau 0.5L", price: "1.9 DT" },
+          { name: "Eau 1 L", price: "3.5 DT" }
+
+        ]
+
+      },
+      {
+         title: "FRAPPUCCINOS",
         subtitle: "Fraîcheur et gourmandise",
         items: [
           { name: "Noisette", price: "11 DT" },
@@ -105,20 +154,6 @@ const menuData = {
           { name: "Nutella", price: "12 DT" },
           { name: "Spéculoos", price: "12 DT" }
         ]
-      }
-    ]
-  },
-  "THÉS, CITRONNADES & SOFT DRINKS": {
-    sections: [
-      {
-        title: "THÉS TRADITIONNELS",
-        subtitle: "Élégance et fraîcheur infusées",
-        items: [
-          { name: "Thé à la menthe", price: "5 DT" },
-          { name: "Thé aux amandes", price: "8 DT" },
-          { name: "Thé aux pignons", price: "9.5 DT" },
-          { name: "Thé Royal LOTUS", price: "12 DT" }
-        ]
       },
       {
         title: "CITRONNADES",
@@ -127,7 +162,7 @@ const menuData = {
           { name: "Citronnade", price: "7.5 DT" },
           { name: "Citronnade aux amandes", price: "9.5 DT" },
           { name: "Lemon menthe", price: "8 DT", description: "Citronnade, menthe fraîche" },
-          { name: "Blue lemon", price: "11 DT", description: "Sorbet citron, citronnée, sirop de curaçao blue" }
+          { name: "Blue lemon", price: "11 DT", description: "Sorbet citron, citronnée, sirop de curacuo blue" }
         ]
       }
     ]
@@ -268,20 +303,20 @@ const menuData = {
         title: "SANDWICHS CIABATTA",
         subtitle: "Sur pain artisanal croustillant",
         items: [
-          { name: "Classic sandwich", price: "10 DT", description: "Thon ou jambon, mayonnaise, sauce à l'ail, laitue, tomate, oignon frais, cheddar, frites" },
-          { name: "Chiko's sandwich", price: "13 DT", description: "Poulet pané ou grillé, mayonnaise, sauce Pesto, laitue, tomate, oignons caramélisés, cheddar, frites" }
+          { name: "Classic sandwich", price: "10 DT", description: "Thon ou jambon, mayonnaise, sauce à l'ail, laitue, tomate, oignon frais, fromage cheddar, frites" },
+          { name: "Chiko's sandwich", price: "13 DT", description: "Poulet pané ou grillé, mayonnaise, sauce Pesto, laitue, tomate, oignons caramélisés, fromage cheddar, frites" }
         ]
       },
       {
         title: "HAMBURGERS",
         subtitle: "Généreux et savoureux",
         items: [
-          { name: "Chicken Burger", price: "Sur demande", description: "Mayonnaise, ketchup, poulet pané, laitue, tomate, oignon et champignons caramélisés, cheddar, frites" },
-          { name: "Beef Burger", price: "Sur demande", description: "Mayonnaise, ketchup, viande hachée, laitue, tomate, oignon et champignons caramélisés, cheddar, frites" }
+          { name: "Chicken Burger", price: "15", description: "Mayonnaise, ketchup, poulet panné, laitue, tomate, oignon et champignons caramélisés, fromage cheddar, frites" },
+          { name: "Bpeuf Burger", price: "16", description: "Mayonnaise, ketchup, viande hachée, laitue, tomate, oignon et champignons caramélisés, fromage cheddar, frites" }
         ]
       },
       {
-        title: "PANINIS & MARLOUB",
+        title: "PANINIS & MAKLOUB",
         subtitle: "Spécialités maison",
         items: [
           { name: "Panini jambon, fromage", price: "9 DT" },
@@ -291,6 +326,16 @@ const menuData = {
           { name: "Makloub au viande hachée", price: "15 DT" },
           { name: "Baguette farcie viande hachée", price: "16 DT" },
           { name: "Baguette farcie escalope", price: "15 DT" }
+        ]
+      },
+      {
+        title: "TACOS",
+        subtitle: "Généreux et savoureux",
+        items: [
+          { name: "Escalope grillé", price: "12 DT"},
+          { name: "Escalope pané", price: "13 DT" },
+          { name: "Cordon bleu", price: "14 DT" },
+          { name: "Viande hachée", price: "14 DT" }
         ]
       }
     ]
@@ -312,13 +357,15 @@ const menuData = {
         ]
       },
       {
-        title: "TACOS",
-        subtitle: "Garnis à votre image",
+        title: "SUPPLEMENT",
+        items: [ {name: "Bordure fromage", price: "3.5 DT" }]
+      },
+      {
+        title: "OJJAS",
+        subtitle: "Saveurs tunisiennes authentiques",
         items: [
-          { name: "Escalope grillé", price: "12 DT" },
-          { name: "Escalope pané", price: "13 DT" },
-          { name: "Cordon bleu", price: "14 DT" },
-          { name: "Viande hachée", price: "14 DT" }
+          { name: "Ojja merguez", price: "23 DT" },
+          { name: "Ojja fruits de mer", price: "28 DT" } 
         ]
       }
     ]
@@ -329,14 +376,15 @@ const menuData = {
         title: "CRÊPES SALÉES",
         subtitle: "Savoureuses et gourmandes",
         items: [
-          { name: "Crêpe jambon fromage", price: "11 DT" },
           { name: "Crêpe thon fromage", price: "12 DT" },
+          { name: "Crêpe jambon fromage", price: "11 DT" },
           { name: "Crêpe tunisienne", price: "14 DT", description: "Thon, fromage, oeuf, harissa, olives" },
           { name: "Crêpe rose", price: "15 DT", description: "Jambon fumé, sauce Gorgonzola, noix" },
           { name: "Crêpe saumon", price: "16 DT", description: "Mozzarella, saumon fumé" },
           { name: "Crêpe poulet", price: "16 DT", description: "Poulet, champignon, fromage" }
         ]
       },
+      
       {
         title: "CRÊPES SUCRÉES",
         subtitle: "La douceur à l'état pur",
@@ -360,27 +408,24 @@ const menuData = {
           { name: "Pancakes Nutella, banane, noisette", price: "17 DT" },
           { name: "Pancakes Lotus", price: "24 DT" }
         ]
-      }
+      },
+      {
+        title: "SALADES",
+        subtitle: "Fraîches et équilibrées",
+        items: [
+          { name: "Salade César", price: "16 DT", description: "Laitue, tomate, poulet grillé, sauce césar, sauce César, parmeson, crouton à l'ail" },
+          { name: "Lotus Salade", price: "20 DT", description: "Laitue,roquette, tomate, bresaola, fromage blanc, galite, roquefort, pesto, crouton à l'ail" },
+          { name: "Salade Niçoise", price: "16 DT", description: "oeuf dur, thon vinaigrette, laitue, tomate" },
+          { name: "Salade Poulet", price: "20 DT", description: "Laitue, poulet grillé, maïs, avocat, tomate, oignon rouge" },
+          { name: "Salade au Saumon", price: "26 DT", description: "Laitue, roquette, tomate, saumon fumé, noix" },
+          { name: "Salade milanaise", price: "18 DT", description: "escalope pané, laitue, tomate, gruyère" }
+        ]
+      } 
     ]
   },
+  
   "CHICHAS & FOUNDCHARES": {
     sections: [
-      {
-        title: "DESSERTS MAISON",
-        subtitle: "La note sucrée parfaite",
-        items: [
-          { name: "Fondant au choix", price: "10 DT" },
-          { name: "Cheesecake San Sebastian", price: "15 DT" },
-          { name: "Cheesecakes au choix", price: "13 DT" },
-          { name: "Tiramisu au choix", price: "13 DT" },
-          { name: "Salade de fruits", price: "9 DT" },
-          { name: "Glace duo", price: "9 DT" },
-          { name: "Glace trio", price: "11 DT" },
-          { name: "Banana split", price: "14 DT" },
-          { name: "Mini assiette de fruits", price: "15 DT" },
-          { name: "Maxi assiette de fruits", price: "25 DT" }
-        ]
-      },
       {
         title: "CHICHAS PARFUMÉES",
         subtitle: "Ambiance et détente",
@@ -388,6 +433,7 @@ const menuData = {
           { name: "Chicha classique", price: "13 DT", description: "Pomme, menthe, fraise, melon" },
           { name: "Chicha raisin menthe", price: "15 DT" },
           { name: "Chicha cheikh money", price: "15 DT" },
+          { name: "Supplément chicha glacé", price: "2 DT" },
           { name: "Chicha love", price: "15 DT" },
           { name: "Formule chicha", price: "18 DT", description: "Chicha, thé à la menthe, eau 0.5L" }
         ]

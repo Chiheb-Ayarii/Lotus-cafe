@@ -81,20 +81,19 @@ export default function ReservationSection() {
     
     setIsSubmitting(true)
     
-    const message = `Bonjour ! Je souhaite faire une réservation au Lotus Coffee House :
-    
+    const message = `Bonjour je veux une réservation à Lotus
+
 Nom : ${formData.name}
 Email : ${formData.email}
 Téléphone : ${formData.phone}
 Date : ${formData.date}
 Heure : ${formData.time}
 Nombre de personnes : ${formData.guests}
-${formData.specialRequests ? `Demandes spéciales : ${formData.specialRequests}` : ''}
 
 Merci de confirmer ma réservation.`
 
     const encodedMessage = encodeURIComponent(message)
-    const whatsappUrl = `https://wa.me/15551234567?text=${encodedMessage}`
+    const whatsappUrl = `https://wa.me/21612345678?text=${encodedMessage}`
     
     // Simulate processing delay
     setTimeout(() => {
@@ -110,10 +109,8 @@ Merci de confirmer ma réservation.`
     
     setIsSubmitting(true)
     
-    const subject = `Demande de réservation - ${formData.name}`
-    const body = `Bonjour Lotus Coffee House,
-
-Je souhaite faire une réservation avec les informations suivantes :
+    const subject = `Réservation Lotus - ${formData.name}`
+    const body = `Bonjour je veux une réservation à Lotus
 
 Nom : ${formData.name}
 Email : ${formData.email}
@@ -121,21 +118,16 @@ Téléphone : ${formData.phone}
 Date : ${formData.date}
 Heure : ${formData.time}
 Nombre de personnes : ${formData.guests}
-${formData.specialRequests ? `Demandes spéciales : ${formData.specialRequests}` : ''}
 
-Veuillez confirmer ma réservation dès que possible.
+Merci de confirmer ma réservation.`
 
-Merci,
-${formData.name}`
-
-    const encodedSubject = encodeURIComponent(subject)
-    const encodedBody = encodeURIComponent(body)
-    const mailtoUrl = `mailto:founder@lotuscoffee.com?subject=${encodedSubject}&body=${encodedBody}`
+    // URL spécifique pour ouvrir Gmail
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=lotuscoffee@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
     
     // Simulate processing delay
     setTimeout(() => {
       setIsSubmitting(false)
-      window.location.href = mailtoUrl
+      window.open(gmailUrl, '_blank')
     }, 1000)
   }
 
@@ -228,15 +220,15 @@ ${formData.name}`
               <div className="contact-methods">
                 <div className="contact-method">
                   <Phone className="contact-icon" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+216 12 345 678</span>
                 </div>
                 <div className="contact-method">
                   <Mail className="contact-icon" />
-                  <span>reservations@lotuscoffee.com</span>
+                  <span>lotuscoffee@gmail.com</span>
                 </div>
                 <div className="contact-method">
                   <MapPin className="contact-icon" />
-                  <span>123 Coffee Street, Downtown</span>
+                  <span>Tunis, Tunisia</span>
                 </div>
               </div>
             </div>
@@ -308,7 +300,7 @@ ${formData.name}`
                       value={formData.phone}
                       onChange={handleChange}
                       className="form-input"
-                      placeholder="+1 (555) 123-4567"
+                      placeholder="+216 12 345 678"
                     />
                   </div>
                 </div>
@@ -423,7 +415,7 @@ ${formData.name}`
                     ) : (
                       <>
                         <Mail className="button-icon" />
-                        Réserver par e-mail
+                        Réserver via Gmail
                       </>
                     )}
                   </button>

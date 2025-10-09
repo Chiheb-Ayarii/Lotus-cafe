@@ -43,7 +43,7 @@ const menuCategories = [
         align: "right",
     },
     {
-        title: "THÉS, CITRONNADES & SOFT DRINKS",
+        title: "CITRONNADES & SOFT DRINKS",
         subtitle: "Élégance et Fraîcheur Infusées",
         description:
             "Des breuvages qui marient tradition et modernité, des thés parfumés aux citronnades vivifiantes, pour une pause rafraîchissante à tout moment de la journée.",
@@ -83,7 +83,7 @@ const menuCategories = [
         align: "left",
     },
     {
-        title: "SALADES & CRÊPES SALÉES",
+        title: "SALADES & CRÊPES ",
         subtitle: "Fraîcheur et Équilibre",
         description:
             "Découvrez nos sandwichs signature préparés avec des ingrédients frais et savoureux, offrant un équilibre parfait entre textures et goûts. Parfaits pour un déjeuner rapide ou un repas léger.",
@@ -99,10 +99,10 @@ const menuCategories = [
         align: "left",
     },
     {
-        title: "CHICHAS & FOUNDCHARES",
+        title: "CHICHAS ",
         subtitle: "Ambiance et Détente",
         description:
-            "Nos bowls énergétiques combinent protéines, légumes frais et grains anciens pour un repas complet et équilibré. Parfaits pour les amateurs de cuisine saine et savoureuse.",
+            "Un mélange parfait de saveurs raffinées et d’ambiance chaleureuse, à partager entre amis autour d’une chicha parfumée.",
         image: "./public/menuphotos/chicha.png",
         align: "right",
     },

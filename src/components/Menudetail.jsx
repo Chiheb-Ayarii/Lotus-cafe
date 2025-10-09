@@ -52,6 +52,7 @@ const menuData = {
       {
         title: "FORMULES PETIT DÉJEUNER",
         subtitle: "Le commencement parfait de votre journée",
+        note: "Croissant ou cake (selon disponibilité)",
         items: [
           { name: "Fast", price: "9 DT", description: "Café, jus au choix, eau 0.5L, viennoiserie" },
           { name: "Fast Gourmand", price: "13 DT", description: "Café, jus au choix, eau 0.5L, viennoiserie, omelette" },
@@ -62,6 +63,7 @@ const menuData = {
       {
         title: "BRUNCH WEEK-END",
         subtitle: "Une expérience gourmande à partager",
+        note: "Disponible uniquement le samedi et dimanche de 10h à 14h,Croissant ou cake (selon disponibilité)",
         items: [
           { name: "Brunch (2 personnes)", price: "59", description: "2 cafés, 2 jus au choix, 2 yaourts, viennoiseries, cakes, 2 mini brownies, 2 mini gàteaux, 2 mini cheeecakes, 4 mini pancakes chocolat, toast, miel, confiture, beurre et chocolat, assiette de charcuterie, 2 croissants salées, 2 mini crepes salées, 2 brochettes escalopes" }
         ]
@@ -81,7 +83,7 @@ const menuData = {
     sections: [
       {
         title: "CAFÉS CLASSIQUES",
-        subtitle: "L'art de la torréfaction",
+        subtitle: "Le classique revisité.",
         items: [
           { name: "Expresso", price: "3.8 DT" },
           { name: "Capucin", price: "4.3 DT" },
@@ -95,7 +97,7 @@ const menuData = {
       },
       {
         title: "CAFÉS SPÉCIALITÉS",
-        subtitle: "Créations uniques et raffinées",
+        subtitle: "L’expérience café autrement.",
         items: [
           { name: "Café glacé", price: "7 DT" },
           { name: "Café liégeois", price: "8 DT" },
@@ -114,7 +116,7 @@ const menuData = {
         ]
       },
       {
-       title: "THÉS TRADITIONNELS",
+        title: "THÉS TRADITIONNELS",
         subtitle: "Élégance et fraîcheur infusées",
         items: [
           { name: "Thé à la menthe", price: "5 DT" },
@@ -123,6 +125,14 @@ const menuData = {
           { name: "Thé Royal LOTUS", price: "12 DT" },
           { name: "Thé infusion", price: "6 DT" },
           { name: "Ice tea", price: "12 DT" }
+        ]
+      },
+      {
+        title: "LES SUPPLEMENTS",
+        items: [
+          { name: "Amandes", price: "3 DT" },
+          { name: "Pignons", price: "5" },
+          { name: "Sirop ", price: "2 DT", description: "Menthe, Grenadine" }
         ]
       }
     ]
@@ -143,7 +153,7 @@ const menuData = {
 
       },
       {
-         title: "FRAPPUCCINOS",
+        title: "FRAPPUCCINOS",
         subtitle: "Fraîcheur et gourmandise",
         items: [
           { name: "Noisette", price: "11 DT" },
@@ -156,8 +166,17 @@ const menuData = {
         ]
       },
       {
+        title: "FOUNDCHAKES",
+        subtitle: "Happiness served in a cup",
+        items: [
+          { name: "Pistache", price: "16 DT" },
+          { name: "Chocolat", price: "16 DT" },
+          { name: "Noisette", price: "16 DT" }
+        ]
+      },
+      {
         title: "CITRONNADES",
-        subtitle: "Rafraîchissantes et vivifiantes",
+        subtitle: "Refraîchissantes et vivifiantes",
         items: [
           { name: "Citronnade", price: "7.5 DT" },
           { name: "Citronnade aux amandes", price: "9.5 DT" },
@@ -183,14 +202,19 @@ const menuData = {
         ]
       },
       {
+
         title: "SMOOTHIES VITAMINÉS",
         subtitle: "Onctueux et revitalisants",
         items: [
           { name: "White", price: "10.5 DT", description: "Pomme, banane" },
           { name: "Kiwis", price: "10.5 DT", description: "Kiwi, banane, basilic" },
           { name: "Pink", price: "11 DT", description: "Fruits rouges" },
-          { name: "Love", price: "11 DT", description: "Banane, fraise" }
+          { name: "Love", price: "11 DT", description: "Banane, fraise" },
+          { name: "Exotic", price: "12 DT", description: "Mangue, ananas" },
+          { name: "Passion", price: "12 DT", description: "Fruits de passion" },
+          { name: "O banane", price: "12 DT", description: "banane, oreo" }
         ]
+
       },
       {
         title: "COCKTAILS DÉTOX",
@@ -213,14 +237,12 @@ const menuData = {
           { name: "Perle", price: "14 DT", description: "Pêche, banane, framboise" },
           { name: "Banane berry", price: "12 DT", description: "Banane, pomme" },
           { name: "Arc-en-ciel", price: "14 DT", description: "Fraise, kiwi, banane" },
-          { name: "Exotic", price: "12 DT", description: "Mangue, ananas" },
-          { name: "Passion", price: "12 DT", description: "Fruits de passion" },
-          { name: "Ô banane", price: "12 DT", description: "Banane, oreo" },
           { name: "Tropical", price: "14 DT", description: "Pomme, ananas, mangue" },
-          { name: "Banana-boust", price: "16 DT", description: "Banane, dattes, fruits secs, miel" }
+          { name: "Banana-boust", price: "16 DT", description: "Banane, dattes, fruits secs, miel" },
+          { name: "Cocktail de la saison", price: "14 DT", description: "3 fruits de saison au choix" }
         ]
-      }
-    ]
+      },
+    ] 
   },
   "MOJITOS & MILKSHAKES": {
     sections: [
@@ -251,10 +273,10 @@ const menuData = {
         ]
       },
       {
-        title: "SPÉCIALITÉS",
+        title: "Jwejem",
         subtitle: "Créations signature",
         items: [
-          { name: "J wejem Lotus", price: "16 DT", description: "Yaourt, miel, biscuit, fruits secs, fruits de la saison" }
+          { name: "Jwejem Lotus", price: "16 DT", description: "Yaourt, miel, biscuit, fruits secs, fruits de la saison" }
         ]
       }
     ]
@@ -265,34 +287,35 @@ const menuData = {
         title: "PÂTES ITALIENNES",
         subtitle: "L'authenticité de l'Italie",
         items: [
-          { name: "Putianesca", price: "Sur demande", description: "Penne, sauce tomate, olives, piment rouge, thon" },
-          { name: "Bolognaise", price: "Sur demande", description: "Sauce tomate, viande hachée, piment vert" },
-          { name: "Penne 4 fromages", price: "Sur demande", description: "Sauce blanche, roquefort, parmesan, gruyère, cheddar" },
-          { name: "Tagliatelle au saumon", price: "Sur demande", description: "Sauce rosé, saumon, parmesan" },
-          { name: "Spaghetti fruits de mer", price: "Sur demande" },
-          { name: "Penne poulet champignon", price: "Sur demande", description: "Sauce au choix, poulet, champignon, parmesan" },
-          { name: "Penne crevette", price: "Sur demande", description: "Sauce au choix, crevette, chevrette, parmesan" }
+          { name: "Puttanesca", price: "18 DT", description: "Penne, sauce tomate, olives, piment rouge, thon" },
+          { name: "Bolognaise", price: "20 DT", description: "Sauce tomate, viande hachée, piment vert" },
+          { name: "Penne 4 fromages", price: "30 DT", description: "Sauce blanche, roquefort, parmesan, gruyère, cheddar" },
+          { name: "Tagliatelle au saumon", price: "32 DT", description: "Sauce rosé, saumon, parmesan" },
+          { name: "Spaghetti fruits de mer", price: "32 DT" },
+          { name: "Penne poulet champignon", price: "24 DT", description: "Sauce au choix, poulet, champignon, parmesan" },
+          { name: "Penne crevette", price: "32 DT", description: "Sauce au choix, crevette, chevrette, parmesan" }
         ]
       },
       {
         title: "LASAGNES",
         subtitle: "Généreuses et savoureuses",
         items: [
-          { name: "Lasagne poulet", price: "Sur demande" },
-          { name: "Lasagne viande hachée", price: "Sur demande" },
-          { name: "Lasagne crevette", price: "Sur demande" }
+          { name: "Lasagne poulet", price: "16 DT" },
+          { name: "Lasagne viande hachée", price: "18 DT" },
+          { name: "Lasagne crevette", price: "20 DT" }
         ]
       },
       {
         title: "PLATS PRINCIPAUX",
-        subtitle: "Accompagnés de riz, légumes sautés et frites",
+        subtitle: " Classiques revisités",
+        note: "Accompagnés de riz au pate, légumes sautés et frites",
         items: [
-          { name: "Escalope grillée", price: "Sur demande" },
-          { name: "Escalope panée", price: "Sur demande" },
-          { name: "Escalope à la crème", price: "Sur demande" },
-          { name: "Cordon bleu sauce roquefort", price: "Sur demande" },
-          { name: "Emincé de bœuf", price: "Sur demande" },
-          { name: "Plat enfant", price: "Sur demande", description: "Escalope pané, pâte, frite" }
+          { name: "Escalope grillée", price: "19.5 DT" },
+          { name: "Escalope pannée", price: "21.5 DT" },
+          { name: "Escalope à la crème", price: "24.5 DT" },
+          { name: "Cordon bleu sauce roquefort", price: "24 DT" },
+          { name: "Emincé de bœuf", price: "42 DT" },
+          { name: "Plat enfant", price: "17 DT", description: "Escalope panné, pâte, frite" }
         ]
       }
     ]
@@ -304,7 +327,7 @@ const menuData = {
         subtitle: "Sur pain artisanal croustillant",
         items: [
           { name: "Classic sandwich", price: "10 DT", description: "Thon ou jambon, mayonnaise, sauce à l'ail, laitue, tomate, oignon frais, fromage cheddar, frites" },
-          { name: "Chiko's sandwich", price: "13 DT", description: "Poulet pané ou grillé, mayonnaise, sauce Pesto, laitue, tomate, oignons caramélisés, fromage cheddar, frites" }
+          { name: "Chiko's sandwich", price: "13 DT", description: "Poulet panné ou grillé, mayonnaise, sauce Pesto, laitue, tomate, oignons caramélisés, fromage cheddar, frites" }
         ]
       },
       {
@@ -333,7 +356,7 @@ const menuData = {
         subtitle: "Généreux et savoureux",
         items: [
           { name: "Escalope grillé", price: "12 DT"},
-          { name: "Escalope pané", price: "13 DT" },
+          { name: "Escalope panné", price: "13 DT" },
           { name: "Cordon bleu", price: "14 DT" },
           { name: "Viande hachée", price: "14 DT" }
         ]
@@ -370,7 +393,7 @@ const menuData = {
       }
     ]
   },
-  "SALADES & CRÊPES SALÉES": {
+  "SALADES & CRÊPES ": {
     sections: [
       {
         title: "CRÊPES SALÉES",
@@ -410,6 +433,17 @@ const menuData = {
         ]
       },
       {
+        title: "Omlettes",
+        subtitle: "Légères et savoureuses",
+        items: [
+          { name: "Omlettes jambon , fromage", price: "10 DT" },
+          { name: "Omlettes thon, fromage", price: "11 DT" },
+          { name: "Omlettes Chiko's", price: "15 DT", description: "Poulet, champignon, fromage" },
+          { name: "Omlettes chevrettes", price: "15 DT" },
+          { name: "Omlettes Végétarienne", price: "11 DT" }
+        ]
+      },
+      {
         title: "SALADES",
         subtitle: "Fraîches et équilibrées",
         items: [
@@ -418,13 +452,13 @@ const menuData = {
           { name: "Salade Niçoise", price: "16 DT", description: "oeuf dur, thon vinaigrette, laitue, tomate" },
           { name: "Salade Poulet", price: "20 DT", description: "Laitue, poulet grillé, maïs, avocat, tomate, oignon rouge" },
           { name: "Salade au Saumon", price: "26 DT", description: "Laitue, roquette, tomate, saumon fumé, noix" },
-          { name: "Salade milanaise", price: "18 DT", description: "escalope pané, laitue, tomate, gruyère" }
+          { name: "Salade milanaise", price: "18 DT", description: "escalope panné, laitue, tomate, gruyère" }
         ]
       } 
     ]
   },
   
-  "CHICHAS & FOUNDCHARES": {
+  "CHICHAS ": {
     sections: [
       {
         title: "CHICHAS PARFUMÉES",
@@ -464,6 +498,7 @@ const menuData = {
               <p className="section-subtitle">{section.subtitle}</p>
               <h2 className="section-title">{section.title}</h2>
               <div className="title-underline"></div>
+              
             </div>
 
             <div className="menu-items">
@@ -472,9 +507,11 @@ const menuData = {
                   <div className="item-info">
                     <span className="item-name">{item.name}</span>
                     {item.description && <span className="item-description">{item.description}</span>}
+                    {section.note && <div className="section-note">{section.note}</div>}
                   </div>
                   <div className="item-dots"></div>
                   <span className="item-price">{item.price}</span>
+                  
                 </div>
               ))}
             </div>

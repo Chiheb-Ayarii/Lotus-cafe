@@ -64,8 +64,8 @@
 }
 
 .section-subtitle {
-  font-family: "Allura", cursive;
-  font-size: 1.8rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.5rem;
   color: #7a9b76;
   margin-bottom: 10px;
 }
@@ -90,6 +90,12 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+.section-note {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7rem;
+  color: #6a6a6a;
+  font-style: italic;
 }
 
 .menu-item {

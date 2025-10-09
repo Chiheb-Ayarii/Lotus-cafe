@@ -70,24 +70,24 @@ export function AboutSection({ onNavigate }) {
             <div className="images-grid">
               <div className="images-column">
                 <img
-                  src="./public/lotusabout/coffee.jpg"
+                  src="/lotusabout/coffee.jpg"
                   alt="café"
                   className="image-large"
                 />
                 <img
-                  src="./public/lotus-terrace-view.jpg"
+                  src="/lotus-terrace-view.jpg"
                   alt="Equipe"
                   className="image-small"
                 />
               </div>
               <div className="images-column images-column-offset">
                 <img
-                  src="./public/lotus-interior-night.jpg"
+                  src="/lotus-interior-night.jpg"
                   alt="Intérieur du café"
                   className="image-small"
                 />
                 <img
-                  src="./public/lotusabout/food.jpg"
+                  src="/lotusabout/food.jpg"
                   alt="Nourriture"
                   className="image-large"
                 />

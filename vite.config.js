@@ -10,7 +10,5 @@ export default defineConfig({
       },
     }),
   ],
-
-  // 👇 Add this line:
-  base: '/Lotus-cafe/', // replace with your repo name
+  base: './',
 })

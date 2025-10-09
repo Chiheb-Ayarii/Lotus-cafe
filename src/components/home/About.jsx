@@ -75,14 +75,14 @@ export function AboutSection({ onNavigate }) {
                   className="image-large"
                 />
                 <img
-                  src="./public/lotusabout/lotus_team.jpg"
+                  src="./public/lotus-terrace-view.jpg"
                   alt="Equipe"
                   className="image-small"
                 />
               </div>
               <div className="images-column images-column-offset">
                 <img
-                  src="./public/lotusabout/lotus.jpg"
+                  src="./public/lotus-interior-night.jpg"
                   alt="Intérieur du café"
                   className="image-small"
                 />

@@ -9,13 +9,13 @@ const slides = [
   },
   {
     image: "./src/assets/hero2.png",
-    title: "Ambiance Conviviale",
-    description: "Détendez-vous et dînez dans notre espace chaleureux conçu pour votre confort."
+    title: "Éclat & Sérénité",
+    description: "Terrasse ouverte, journée parfaite offerte."
   },
   {
     image: "./src/assets/hero3.png",
-    title: "Ingrédients Frais",
-    description: "Des produits de la ferme à notre table, sourcés quotidiennement pour une saveur exceptionnelle."
+    title: "Calme & Saveur",
+    description: "Ici on se pose, et le stress s’expose.."
   }
 ];
 

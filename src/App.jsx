@@ -5,7 +5,7 @@ import LotusAbout from './components/LotusAbout.jsx'
 import Lotusgallery from './components/Galerie.jsx'
 import Lotusmenu from './components/Menu.jsx'
 import MenuDetail from './components/Menudetail.jsx'
-import LotusContact from './components/contact.jsx'
+import LotusContact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
 import Fullmenu from './components/Fullmenu.jsx'
 

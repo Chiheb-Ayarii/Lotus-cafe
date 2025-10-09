@@ -1,5 +1,5 @@
 import { Coffee, Instagram, Facebook, Twitter,Mail, Phone, MapPin } from 'lucide-react'
-import './footer.css'
+import './Footer.css'
 
 // wait for an element to appear in the DOM, then call callback
 function waitForElement(selector, timeout = 1000) {

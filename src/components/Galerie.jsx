@@ -28,7 +28,7 @@ export default function Lotusgallery() {
 const galleryImages = [
     { src: "gallerie/gal1.png", alt: "Milkshake" },
     { src: "gallerie/gal2.png", alt: "Salade" },
-    { src: "gal3.png", alt: "Tiramisu" },
+    { src: "gallerie/gal3.png", alt: "Tiramisu" },
     { src: "gallerie/gal4.png", alt: "Cheesecake" },
     { src: "gallerie/gal5.png", alt: "Pâtes Fraîches" },
     { src: "gallerie/gal6.png", alt: "Jus" },

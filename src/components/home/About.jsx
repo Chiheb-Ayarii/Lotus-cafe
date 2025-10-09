@@ -112,7 +112,7 @@ const specialties = [
     category: "Breakfast",
     description: "Signature breakfast with tartines, scrambled eggs, 3 mini Nutella pancakes, and French toast with honey - the ultimate Lotus morning experience.",
     image: "https://images.unsplash.com/photo-1551218808-94e220e084d2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-    price: "$18.50",
+    price: "18.5 DT",
     featured: true
   },
   {
@@ -121,7 +121,7 @@ const specialties = [
     category: "Breakfast",
     description: "Premium breakfast for two with omelets, charcuterie, 6 mini cheese tartines with salmon and bacon, and choice of mini pancakes.",
     image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-    price: "$32.00",
+    price: "32.00 DT",
     featured: true
   },
   {
@@ -130,7 +130,7 @@ const specialties = [
     category: "Breakfast",
     description: "Perfect balanced breakfast with coffee, juice, water, pastry and a hearty omelette - excellent value and satisfaction.",
     image: "https://images.unsplash.com/photo-1559715745-e1b33a271c8f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-    price: "$12.75",
+    price: "12.75 DT",
     featured: false
   },
   {
@@ -139,7 +139,7 @@ const specialties = [
     category: "Brunch",
     description: "Ultimate weekend brunch for two featuring pastries, cakes, mini desserts, pancakes, charcuterie, and savory brochettes - our signature sharing experience.",
     image: "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-    price: "$45.00",
+    price: "45 DT",
     featured: true
   },
   {
@@ -148,7 +148,7 @@ const specialties = [
     category: "Crepes/Waffles",
     description: "Our signature dessert crepe with premium Lotus spread - the most indulgent and unique sweet creation on our menu.",
     image: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-    price: "$23.00",
+    price: "23 DT",
     featured: true
   },
   {
@@ -157,7 +157,7 @@ const specialties = [
     category: "Crepes/Waffles",
     description: "Fluffy pancakes featuring our exclusive Lotus spread - a breakfast dessert masterpiece that defines our brand.",
     image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-    price: "$17.00",
+    price: "17 DT",
     featured: true
   },
   {
@@ -166,7 +166,7 @@ const specialties = [
     category: "Crepes/Waffles",
     description: "Classic crowd-pleaser with Nutella, fresh banana, and crunchy hazelnuts - perfectly executed every time.",
     image: "https://images.unsplash.com/photo-1551782455-6a27c1c99452?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-    price: "$16.00",
+    price: "16 DT",
     featured: false
   },
   {
@@ -175,7 +175,7 @@ const specialties = [
     category: "Drinks",
     description: "Exclusive premium tea blend crafted specifically for Café Lotus - a unique and sophisticated beverage experience.",
     image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-    price: "$12.00",
+    price: "12 DT",
     featured: true
   },
   {
@@ -184,7 +184,7 @@ const specialties = [
     category: "Drinks",
     description: "Stunning visual masterpiece with fresh lemonade and blue curacao syrup - as beautiful as it is refreshing.",
     image: "https://images.unsplash.com/photo-1497534446932-c925b458314e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-    price: "$9.50",
+    price: "9 DT",
     featured: true
   },
   {
@@ -193,7 +193,7 @@ const specialties = [
     category: "Drinks",
     description: "Healthy energizing blend of apple, pineapple and cinnamon - the perfect wellness-oriented choice for health-conscious guests.",
     image: "https://images.unsplash.com/photo-1546171753-97d7676e4602?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-    price: "$12.00",
+    price: "12 DT",
     featured: false
   }
 ];

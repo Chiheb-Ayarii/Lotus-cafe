@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Nav from './components/nav'
 import Home from './components/Home'
-import LotusAbout from './components/Lotusabout.jsx'
+import LotusAbout from './components/LotusAbout.jsx'
 import Lotusgallery from './components/Galerie.jsx'
 import Lotusmenu from './components/Menu.jsx'
 import MenuDetail from './components/Menudetail.jsx'

@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://wissem-sahli.github.io/Lotus-cafe/",
+  "homepage": "https://Chiheb-Ayarii.github.io/Lotus-cafe/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",

@@ -18,7 +18,18 @@ function App() {
 
   // central navigate function: updates state and URL hash
   const handleNavigate = (page, opts = {}) => {
-    // save current scroll position for the current active page
+    // If user clicked the same page (and not asking to change category), smooth-scroll to top
+    const isSamePage = page === activePage && (!(page === 'menuDetail' && opts && opts.category && opts.category !== selectedCategory))
+    if (isSamePage) {
+      try {
+        if (typeof window !== 'undefined') {
+          window.scrollTo({ top: 0, behavior: 'smooth' })
+        }
+      } catch (e) {}
+      return
+    }
+
+    // save current scroll position for the current active page (only when actually navigating away)
     try {
       if (typeof window !== 'undefined' && activePage) {
         scrollPositions.current[activePage] = window.scrollY || window.pageYOffset || 0
@@ -47,12 +58,7 @@ function App() {
     }
   }
 
-  // scroll to top whenever the active page changes
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.scrollTo({ top: 0, behavior: 'smooth' })
-    }
-  }, [activePage])
+  // removed duplicate top scroll effect; scrolling is handled in the restore effect below
 
   // on mount: read hash to set initial page, and listen for hash changes
   useEffect(() => {

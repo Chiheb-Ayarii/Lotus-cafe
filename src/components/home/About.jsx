@@ -147,7 +147,7 @@ const specialties = [
     title: "Crêpe Lotus",
     category: "Crepes/Waffles",
     description: "Our signature dessert crepe with premium Lotus spread - the most indulgent and unique sweet creation on our menu.",
-    image: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    image: "images/crepelotus.png",
     price: "23 DT",
     featured: true
   },
@@ -156,7 +156,7 @@ const specialties = [
     title: "Pancakes Lotus",
     category: "Crepes/Waffles",
     description: "Fluffy pancakes featuring our exclusive Lotus spread - a breakfast dessert masterpiece that defines our brand.",
-    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    image: "/images/Pancakelotus.png",
     price: "17 DT",
     featured: true
   },
@@ -165,7 +165,7 @@ const specialties = [
     title: "Crêpe Nutella Banane Noisette",
     category: "Crepes/Waffles",
     description: "Classic crowd-pleaser with Nutella, fresh banana, and crunchy hazelnuts - perfectly executed every time.",
-    image: "https://images.unsplash.com/photo-1551782455-6a27c1c99452?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    image: "images/crepenutella.png",
     price: "16 DT",
     featured: false
   },
@@ -311,42 +311,42 @@ const testimonials = [
     name: "Sarah Chen",
     rating: 5,
     text: "Déjeuner parfait ! Nourriture délicieuse et accueil chaleureux. Je recommande vivement !",
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612b1b3?w=150&h=150&fit=crop&crop=faces&auto=format"
+    image: "/images/customer5.png"
   },
   {
     id: 2,
     name: "Samar Ben haj ali",
     rating: 5,
     text: "Un repas délicieux et un personnel aux petits soins. À ne pas manquer !",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+    image: "/images/customer2.png"
   },
   {
     id: 3,
     name: "Ameur ZAMMOURI",
     rating: 4,
     text: "Nourriture savoureuse, service impeccable. Je reviendrai sans hésiter !",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+    image: "/images/customer.png"
   },
   {
     id: 4,
-    name: "Lina Miled",
+    name: "Helmi Chihaoui",
     rating: 5,
     text: "Espace cosy et lumineux, idéal pour les sessions de révision.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+    image: "/images/customer3.png"
   },
   {
     id: 5,
     name: "Mohamed Amine",
     rating: 5,
     text: "Un intérieur apaisant où l’inspiration vient naturellement.",
-    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&h=150&fit=crop&crop=face"
+    image: "/images/customer4.png"
   },
   {
     id: 6,
     name: "Wissem Sahli",
     rating: 4,
     text: "L’endroit parfait pour respirer, réfléchir et savourer un bon café.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
+    image: "/images/customer5.png"
   }
 ]
 

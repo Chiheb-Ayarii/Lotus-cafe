@@ -15,15 +15,40 @@ const slides = [
   {
     image: "/images/hero3.webp",
     title: "Calme & Saveur",
-    description: "Ici on se pose, et le stress s’expose.."
+    description: "Ici on se pose, et le stress s'expose.."
   }
 ];
 
 const Hero = ({ onNavigate }) => {
   const [current, setCurrent] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
   const length = slides.length;
   const intervalRef = useRef(null);
+
+  // Précharger les images
+  useEffect(() => {
+    const loadImages = async () => {
+      const imagePromises = slides.map(slide => {
+        return new Promise((resolve, reject) => {
+          const img = new Image();
+          img.src = slide.image;
+          img.onload = resolve;
+          img.onerror = reject;
+        });
+      });
+
+      try {
+        await Promise.all(imagePromises);
+        setImagesLoaded(true);
+      } catch (error) {
+        console.error('Error loading hero images:', error);
+        setImagesLoaded(true); // Continuer même en cas d'erreur
+      }
+    };
+
+    loadImages();
+  }, []);
 
   useEffect(() => {
     intervalRef.current = setInterval(() => {
@@ -64,7 +89,7 @@ const Hero = ({ onNavigate }) => {
     <section className="hero">
       {slides.map((slide, index) => (
         <div
-          className={`slide ${index === current ? "active" : ""}`}
+          className={`slide ${index === current ? "active" : ""} ${!imagesLoaded ? 'loading' : ''}`}
           key={index}
           style={{ backgroundImage: `url(${slide.image})` }}
         />

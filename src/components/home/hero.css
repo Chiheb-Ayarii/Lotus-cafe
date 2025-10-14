@@ -291,3 +291,27 @@
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   font-size: 18px;
 }
+/* Ajouter à la fin de hero.css */
+.slide.loading {
+  background-color: #f0f0f0;
+  background-image: none;
+}
+
+.slide.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #8a9b6e;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}

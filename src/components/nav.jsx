@@ -35,6 +35,7 @@ const Nav = ({ onNavigate }) => {
           <img 
             src="/LOTUS LOGO.webp"
             alt="Logo" 
+            loading="lazy"
             className="logo-image"
           />
         </div>

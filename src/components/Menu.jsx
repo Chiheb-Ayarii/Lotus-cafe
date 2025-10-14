@@ -32,6 +32,7 @@ const menuCategories = [
         description:
                   "Découvrez nos formules petit-déjeuner soigneusement préparées pour bien commencer la journée. Des options simples aux brunchs complets, il y en a pour tous les appétits et tous les moments.",
         image: "/menuphotos/petits dej et brunchs.webp",
+        loading: "lazy",
         align: "left",
     },
     {
@@ -40,6 +41,7 @@ const menuCategories = [
         description:
             "Des grains soigneusement sélectionnés et des préparations maîtrisées pour révéler toutes les subtilités de l'arôme, du classique espresso aux créations les plus gourmandes.",
         image: "/menuphotos/cafes et boissons chaudes.webp",
+        loading: "lazy",
         align: "right",
     },
     {
@@ -48,6 +50,7 @@ const menuCategories = [
         description:
             "Des breuvages qui marient tradition et modernité, des thés parfumés aux citronnades vivifiantes, pour une pause rafraîchissante à tout moment de la journée.",
         image: "/menuphotos/thes citronnades et soft drinks.webp",
+        loading: "lazy",
         align: "left",
     },
     {
@@ -56,6 +59,7 @@ const menuCategories = [
         description:
             "Des fruits frais pressés à la commande, des smoothies onctueux et des créations originales pour faire le plein de vitamines et de saveurs naturelles.",
         image: "/menuphotos/boissons fraiches et smoothies.webp",
+        loading: "lazy",
         align: "right",
     },
     {
@@ -64,6 +68,7 @@ const menuCategories = [
         description:
             "Une cuisine généreuse qui marie tradition italienne et influences méditerranéennes, des pâtes al dente aux plats composés, pour un repas complet et satisfaisant.",
         image: "/menuphotos/plats et pates.webp",
+        loading: "lazy",
         align: "left",
     },
     {
@@ -72,6 +77,7 @@ const menuCategories = [
         description:
             "Du pain frais, des garnitures généreuses et des associations savoureuses pour un repas rapide mais jamais ordinaire, entre tradition et modernité.",
         image: "/menuphotos/sandwichs burgers et tacos.webp",
+        loading: "lazy",
         align: "right",
     },
     {
@@ -80,6 +86,7 @@ const menuCategories = [
         description:
             "La fine fleur de la cuisine de partage, des pizzas à la pâte fine et croustillante aux ojjas brûlants et parfumés, pour des moments de complicité gustative.",
         image: "/menuphotos/Pizzas et ojjas.webp",
+        loading: "lazy",
         align: "left",
     },
     {
@@ -88,6 +95,7 @@ const menuCategories = [
         description:
             "Découvrez nos sandwichs signature préparés avec des ingrédients frais et savoureux, offrant un équilibre parfait entre textures et goûts. Parfaits pour un déjeuner rapide ou un repas léger.",
         image: "/menuphotos/salades et crepes salees.webp",
+        loading: "lazy",
         align: "right",
     },
     {
@@ -96,6 +104,7 @@ const menuCategories = [
         description:
             "Savourez nos soupes maison, préparées avec des ingrédients frais et de qualité. Chaque cuillère vous offre un moment de réconfort, parfait pour vous réchauffer et vous ressourcer.",
         image: "/menuphotos/crepes et pancake.webp",
+        loading: "lazy",
         align: "left",
     },
     {
@@ -104,6 +113,7 @@ const menuCategories = [
         description:
             "Un mélange parfait de saveurs raffinées et d’ambiance chaleureuse, à partager entre amis autour d’une chicha parfumée.",
         image: "/menuphotos/chicha.webp",
+        loading: "lazy",
         align: "right",
     },
 ]

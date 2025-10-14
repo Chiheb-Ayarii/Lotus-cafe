@@ -73,11 +73,13 @@ export function AboutSection({ onNavigate }) {
                   src="/lotusabout/coffee.webp"
                   alt="café"
                   className="image-large"
+                  loading="lazy"
                 />
                 <img
                   src="/lotus-terrace-view.webp"
                   alt="Equipe"
                   className="image-small"
+                  loading="lazy"
                 />
               </div>
               <div className="images-column images-column-offset">
@@ -85,11 +87,13 @@ export function AboutSection({ onNavigate }) {
                   src="/lotus-interior-night.webp"
                   alt="Intérieur du café"
                   className="image-small"
+                  loading="lazy"
                 />
                 <img
                   src="/lotusabout/food.webp"
                   alt="Nourriture"
                   className="image-large"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -111,7 +115,7 @@ const specialties = [
     title: "Lotus Rose Breakfast",
     category: "Breakfast",
     description: "Signature breakfast with tartines, scrambled eggs, 3 mini Nutella pancakes, and French toast with honey - the ultimate Lotus morning experience.",
-    image: "https://images.unsplash.com/photo-1551218808-94e220e084d2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    image: "/images/lotuserosebreakfast.webp",
     price: "18.5 DT",
     featured: true
   },
@@ -120,7 +124,7 @@ const specialties = [
     title: "Le Fameux Royale",
     category: "Breakfast",
     description: "Premium breakfast for two with omelets, charcuterie, 6 mini cheese tartines with salmon and bacon, and choice of mini pancakes.",
-    image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    image: "/images/fameuxroyale.webp",
     price: "32.00 DT",
     featured: true
   },
@@ -129,7 +133,7 @@ const specialties = [
     title: "Fast Gourmand",
     category: "Breakfast",
     description: "Perfect balanced breakfast with coffee, juice, water, pastry and a hearty omelette - excellent value and satisfaction.",
-    image: "https://images.unsplash.com/photo-1559715745-e1b33a271c8f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    image: "/images/fastgourmand.webp",
     price: "12.75 DT",
     featured: false
   },
@@ -138,7 +142,7 @@ const specialties = [
     title: "Le Brunch Lotus",
     category: "Brunch",
     description: "Ultimate weekend brunch for two featuring pastries, cakes, mini desserts, pancakes, charcuterie, and savory brochettes - our signature sharing experience.",
-    image: "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    image: "/images/lebrunchlotus.webp",
     price: "45 DT",
     featured: true
   },
@@ -174,7 +178,7 @@ const specialties = [
     title: "Thé Royal LOTUS",
     category: "Drinks",
     description: "Exclusive premium tea blend crafted specifically for Café Lotus - a unique and sophisticated beverage experience.",
-    image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    image: "/images/theroyallotus.webp",
     price: "12 DT",
     featured: true
   },
@@ -183,7 +187,7 @@ const specialties = [
     title: "Blue Lemon Citronnade",
     category: "Drinks",
     description: "Stunning visual masterpiece with fresh lemonade and blue curacao syrup - as beautiful as it is refreshing.",
-    image: "https://images.unsplash.com/photo-1497534446932-c925b458314e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    image: "/images/bluelemon.webp",
     price: "9 DT",
     featured: true
   },
@@ -192,7 +196,7 @@ const specialties = [
     title: "Power Detox",
     category: "Drinks",
     description: "Healthy energizing blend of apple, pineapple and cinnamon - the perfect wellness-oriented choice for health-conscious guests.",
-    image: "https://images.unsplash.com/photo-1546171753-97d7676e4602?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    image: "/images/powerdetox.webp",
     price: "12 DT",
     featured: false
   }
@@ -251,6 +255,7 @@ export function SpecialtiesSection({ onNavigate }) {
                                     src={item.image}
                                     alt={item.title}
                                     className="card-image"
+                                    loading="lazy"
                                 />
                                 <div className="image-overlay" />
 
@@ -420,9 +425,11 @@ export function TestimonialsSection({ onNavigate }) {
             {/* Customer Info */}
             <div className="customer-info">
               <img
-                src={testimonials[currentTestimonial].image}
+                src={testimonials[currentTestimonial].image }
+                
                 alt={testimonials[currentTestimonial].name}
                 className="customer-image"
+                loading="lazy"
               />
               <div className="customer-details">
                 <h4 className="customer-name">

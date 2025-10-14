@@ -31,7 +31,7 @@ const menuCategories = [
         subtitle: "Commencez Votre Journée en Douceur",
         description:
                   "Découvrez nos formules petit-déjeuner soigneusement préparées pour bien commencer la journée. Des options simples aux brunchs complets, il y en a pour tous les appétits et tous les moments.",
-        image: "/menuphotos/petits dej et brunchs.png",
+        image: "/menuphotos/petits dej et brunchs.webp",
         align: "left",
     },
     {
@@ -39,7 +39,7 @@ const menuCategories = [
         subtitle: "L'Art de la Torréfaction et du Chocolat",
         description:
             "Des grains soigneusement sélectionnés et des préparations maîtrisées pour révéler toutes les subtilités de l'arôme, du classique espresso aux créations les plus gourmandes.",
-        image: "/menuphotos/cafes et boissons chaudes.png",
+        image: "/menuphotos/cafes et boissons chaudes.webp",
         align: "right",
     },
     {
@@ -47,7 +47,7 @@ const menuCategories = [
         subtitle: "Élégance et Fraîcheur Infusées",
         description:
             "Des breuvages qui marient tradition et modernité, des thés parfumés aux citronnades vivifiantes, pour une pause rafraîchissante à tout moment de la journée.",
-        image: "/menuphotos/thes citronnades et soft drinks.png",
+        image: "/menuphotos/thes citronnades et soft drinks.webp",
         align: "left",
     },
     {
@@ -55,7 +55,7 @@ const menuCategories = [
         subtitle: "Vitalité et Fraîcheur à Chaque Gorgée",
         description:
             "Des fruits frais pressés à la commande, des smoothies onctueux et des créations originales pour faire le plein de vitamines et de saveurs naturelles.",
-        image: "/menuphotos/boissons fraiches et smoothies.png",
+        image: "/menuphotos/boissons fraiches et smoothies.webp",
         align: "right",
     },
     {
@@ -63,7 +63,7 @@ const menuCategories = [
         subtitle: "Savoureuses Créations Culinaires",
         description:
             "Une cuisine généreuse qui marie tradition italienne et influences méditerranéennes, des pâtes al dente aux plats composés, pour un repas complet et satisfaisant.",
-        image: "/menuphotos/plats et pates.png",
+        image: "/menuphotos/plats et pates.webp",
         align: "left",
     },
     {
@@ -71,7 +71,7 @@ const menuCategories = [
         subtitle: "Gourmandises à Emporter ou sur Place",
         description:
             "Du pain frais, des garnitures généreuses et des associations savoureuses pour un repas rapide mais jamais ordinaire, entre tradition et modernité.",
-        image: "/menuphotos/sandwichs burgers et tacos.png",
+        image: "/menuphotos/sandwichs burgers et tacos.webp",
         align: "right",
     },
     {
@@ -79,7 +79,7 @@ const menuCategories = [
         subtitle: "Partage et Convivialité",
         description:
             "La fine fleur de la cuisine de partage, des pizzas à la pâte fine et croustillante aux ojjas brûlants et parfumés, pour des moments de complicité gustative.",
-        image: "/menuphotos/Pizzas et ojjas.png",
+        image: "/menuphotos/Pizzas et ojjas.webp",
         align: "left",
     },
     {
@@ -87,7 +87,7 @@ const menuCategories = [
         subtitle: "Fraîcheur et Équilibre",
         description:
             "Découvrez nos sandwichs signature préparés avec des ingrédients frais et savoureux, offrant un équilibre parfait entre textures et goûts. Parfaits pour un déjeuner rapide ou un repas léger.",
-        image: "/menuphotos/salades et crepes salees.png",
+        image: "/menuphotos/salades et crepes salees.webp",
         align: "right",
     },
     {
@@ -95,7 +95,7 @@ const menuCategories = [
         subtitle: "La Note Sucrée Parfaite",
         description:
             "Savourez nos soupes maison, préparées avec des ingrédients frais et de qualité. Chaque cuillère vous offre un moment de réconfort, parfait pour vous réchauffer et vous ressourcer.",
-        image: "/menuphotos/crepes et pancake.png",
+        image: "/menuphotos/crepes et pancake.webp",
         align: "left",
     },
     {
@@ -103,7 +103,7 @@ const menuCategories = [
         subtitle: "Ambiance et Détente",
         description:
             "Un mélange parfait de saveurs raffinées et d’ambiance chaleureuse, à partager entre amis autour d’une chicha parfumée.",
-        image: "/menuphotos/chicha.png",
+        image: "/menuphotos/chicha.webp",
         align: "right",
     },
 ]

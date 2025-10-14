@@ -33,7 +33,7 @@ const Nav = ({ onNavigate }) => {
         {/* Logo */}
         <div className="logo" onClick={handleLogoClick}>
           <img 
-            src="/LOTUS LOGO.jpg"
+            src="/LOTUS LOGO.webp"
             alt="Logo" 
             className="logo-image"
           />

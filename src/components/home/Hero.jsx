@@ -3,17 +3,17 @@ import "./hero.css";
 
 const slides = [
   {
-    image: "/images/hero.png",
+    image: "/images/hero.webp",
     title: "Plats Délicieux",
     description: "Découvrez une cuisine authentique préparée avec passion et les meilleurs ingrédients."
   },
   {
-    image: "/images/hero2.png",
+    image: "/images/hero2.webp",
     title: "Éclat & Sérénité",
     description: "Terrasse ouverte, journée parfaite offerte."
   },
   {
-    image: "/images/hero3.png",
+    image: "/images/hero3.webp",
     title: "Calme & Saveur",
     description: "Ici on se pose, et le stress s’expose.."
   }

@@ -70,24 +70,24 @@ export function AboutSection({ onNavigate }) {
             <div className="images-grid">
               <div className="images-column">
                 <img
-                  src="/lotusabout/coffee.jpg"
+                  src="/lotusabout/coffee.webp"
                   alt="café"
                   className="image-large"
                 />
                 <img
-                  src="/lotus-terrace-view.jpg"
+                  src="/lotus-terrace-view.webp"
                   alt="Equipe"
                   className="image-small"
                 />
               </div>
               <div className="images-column images-column-offset">
                 <img
-                  src="/lotus-interior-night.jpg"
+                  src="/lotus-interior-night.webp"
                   alt="Intérieur du café"
                   className="image-small"
                 />
                 <img
-                  src="/lotusabout/food.jpg"
+                  src="/lotusabout/food.webp"
                   alt="Nourriture"
                   className="image-large"
                 />
@@ -147,7 +147,7 @@ const specialties = [
     title: "Crêpe Lotus",
     category: "Crepes/Waffles",
     description: "Our signature dessert crepe with premium Lotus spread - the most indulgent and unique sweet creation on our menu.",
-    image: "images/crepelotus.png",
+    image: "images/crepelotus.webp",
     price: "23 DT",
     featured: true
   },
@@ -156,7 +156,7 @@ const specialties = [
     title: "Pancakes Lotus",
     category: "Crepes/Waffles",
     description: "Fluffy pancakes featuring our exclusive Lotus spread - a breakfast dessert masterpiece that defines our brand.",
-    image: "/images/Pancakelotus.png",
+    image: "/images/Pancakelotus.webp",
     price: "17 DT",
     featured: true
   },
@@ -165,7 +165,7 @@ const specialties = [
     title: "Crêpe Nutella Banane Noisette",
     category: "Crepes/Waffles",
     description: "Classic crowd-pleaser with Nutella, fresh banana, and crunchy hazelnuts - perfectly executed every time.",
-    image: "images/crepenutella.png",
+    image: "images/crepenutella.webp",
     price: "16 DT",
     featured: false
   },
@@ -311,42 +311,42 @@ const testimonials = [
     name: "Sarah Chen",
     rating: 5,
     text: "Déjeuner parfait ! Nourriture délicieuse et accueil chaleureux. Je recommande vivement !",
-    image: "/images/customer5.png"
+    image: "/images/customer5.webp"
   },
   {
     id: 2,
     name: "Samar Ben haj ali",
     rating: 5,
     text: "Un repas délicieux et un personnel aux petits soins. À ne pas manquer !",
-    image: "/images/customer2.png"
+    image: "/images/customer2.webp"
   },
   {
     id: 3,
     name: "Ameur ZAMMOURI",
     rating: 4,
     text: "Nourriture savoureuse, service impeccable. Je reviendrai sans hésiter !",
-    image: "/images/customer.png"
+    image: "/images/customer.webp"
   },
   {
     id: 4,
     name: "Helmi Chihaoui",
     rating: 5,
     text: "Espace cosy et lumineux, idéal pour les sessions de révision.",
-    image: "/images/customer3.png"
+    image: "/images/customer3.webp"
   },
   {
     id: 5,
     name: "Mohamed Amine",
     rating: 5,
     text: "Un intérieur apaisant où l’inspiration vient naturellement.",
-    image: "/images/customer4.png"
+    image: "/images/customer4.webp"
   },
   {
     id: 6,
     name: "Wissem Sahli",
     rating: 4,
     text: "L’endroit parfait pour respirer, réfléchir et savourer un bon café.",
-    image: "/images/customer5.png"
+    image: "/images/customer5.webp"
   }
 ]
 

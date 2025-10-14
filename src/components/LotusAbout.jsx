@@ -92,7 +92,7 @@ export default function LotusAbout({ onNavigate }) {
             </div>
           </div>
           <div className="intro-image">
-            <img src="/lotus-coffee-latte-art.jpg" alt="Lotus Coffee" />
+            <img src="/lotus-coffee-latte-art.webp" alt="Lotus Coffee" />
           </div>
         </div>
       </section>
@@ -120,7 +120,7 @@ export default function LotusAbout({ onNavigate }) {
               }}>NOTRE MENU</button>
           </div>
           <div className="section-image">
-            <img src="/lotus-cafe-exterior.jpg" alt="Lotus Café Exterior" />
+            <img src="/lotus-cafe-exterior.webp" alt="Lotus Café Exterior" />
           </div>
         </div>
       </section>
@@ -146,7 +146,7 @@ export default function LotusAbout({ onNavigate }) {
             </p>
           </div>
           <div className="section-image">
-            <img src="/lotus-interior-garden.jpg" alt="Lotus Interior Garden" />
+            <img src="/lotus-interior-garden.webp" alt="Lotus Interior Garden" />
           </div>
         </div>
       </section>
@@ -172,7 +172,7 @@ export default function LotusAbout({ onNavigate }) {
             </p>
           </div>
           <div className="section-image">
-            <img src="/lotus-terrace-view.jpg" alt="Lotus Terrace" />
+            <img src="/lotus-terrace-view.webp" alt="Lotus Terrace" />
           </div>
         </div>
       </section>
@@ -200,7 +200,7 @@ export default function LotusAbout({ onNavigate }) {
             </p>
           </div>
           <div className="section-image">
-            <img src="/lotus-interior-night.jpg" alt="Lotus Interior Night" />
+            <img src="/lotus-interior-night.webp" alt="Lotus Interior Night" />
           </div>
         </div>
       </section>

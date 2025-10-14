@@ -92,7 +92,7 @@ export default function LotusAbout({ onNavigate }) {
             </div>
           </div>
           <div className="intro-image">
-            <img src="/lotus-coffee-latte-art.webp" alt="Lotus Coffee" loading="lazy" />
+            <img src="https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760456039/lotus-coffee-latte-art_rp1iks.jpg" alt="Lotus Coffee" loading="lazy" />
           </div>
         </div>
       </section>
@@ -120,7 +120,7 @@ export default function LotusAbout({ onNavigate }) {
               }}>NOTRE MENU</button>
           </div>
           <div className="section-image">
-            <img src="/lotus-cafe-exterior.webp" alt="Lotus Café Exterior" loading="lazy"/>
+            <img src="https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760456039/lotus-cafe-exterior_cdc8fa.jpg" alt="Lotus Café Exterior" loading="lazy"/>
           </div>
         </div>
       </section>
@@ -146,7 +146,7 @@ export default function LotusAbout({ onNavigate }) {
             </p>
           </div>
           <div className="section-image">
-            <img src="/lotus-interior-garden.webp" alt="Lotus Interior Garden"  loading="lazy"/>
+            <img src="https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760456087/lotus-interior-garden_npyotl.jpg" alt="Lotus Interior Garden"  loading="lazy"/>
           </div>
         </div>
       </section>
@@ -172,7 +172,7 @@ export default function LotusAbout({ onNavigate }) {
             </p>
           </div>
           <div className="section-image">
-            <img src="/lotus-terrace-view.webp" alt="Lotus Terrace" loading="lazy"/>
+            <img src="https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760456581/lotus-terrace-view_etsyuy.png" alt="Lotus Terrace" loading="lazy"/>
           </div>
         </div>
       </section>
@@ -200,7 +200,7 @@ export default function LotusAbout({ onNavigate }) {
             </p>
           </div>
           <div className="section-image">
-            <img src="/lotus-interior-night.webp" alt="Lotus Interior Night"  loading="lazy"/>
+            <img src="https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760456321/lotus-interior-night_f30zir.png" alt="Lotus Interior Night"  loading="lazy"/>
           </div>
         </div>
       </section>

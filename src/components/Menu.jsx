@@ -31,7 +31,7 @@ const menuCategories = [
         subtitle: "Commencez Votre Journée en Douceur",
         description:
                   "Découvrez nos formules petit-déjeuner soigneusement préparées pour bien commencer la journée. Des options simples aux brunchs complets, il y en a pour tous les appétits et tous les moments.",
-        image: "/menuphotos/petits dej et brunchs.webp",
+        image: "https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760455998/petits_dej_et_brunchs_nbrxsj.png",
         loading: "lazy",
         align: "left",
     },
@@ -40,7 +40,7 @@ const menuCategories = [
         subtitle: "L'Art de la Torréfaction et du Chocolat",
         description:
             "Des grains soigneusement sélectionnés et des préparations maîtrisées pour révéler toutes les subtilités de l'arôme, du classique espresso aux créations les plus gourmandes.",
-        image: "/menuphotos/cafes et boissons chaudes.webp",
+        image: "https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760455997/cafes_et_boissons_chaudes_rqwyva.png",
         loading: "lazy",
         align: "right",
     },
@@ -49,7 +49,7 @@ const menuCategories = [
         subtitle: "Élégance et Fraîcheur Infusées",
         description:
             "Des breuvages qui marient tradition et modernité, des thés parfumés aux citronnades vivifiantes, pour une pause rafraîchissante à tout moment de la journée.",
-        image: "/menuphotos/thes citronnades et soft drinks.webp",
+        image: "https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760456010/thes_citronnades_et_soft_drinks_dfvx5l.png",
         loading: "lazy",
         align: "left",
     },
@@ -58,7 +58,7 @@ const menuCategories = [
         subtitle: "Vitalité et Fraîcheur à Chaque Gorgée",
         description:
             "Des fruits frais pressés à la commande, des smoothies onctueux et des créations originales pour faire le plein de vitamines et de saveurs naturelles.",
-        image: "/menuphotos/boissons fraiches et smoothies.webp",
+        image: "https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760455994/boissons_fraiches_et_smoothies_vxv5pr.png",
         loading: "lazy",
         align: "right",
     },
@@ -67,7 +67,7 @@ const menuCategories = [
         subtitle: "Savoureuses Créations Culinaires",
         description:
             "Une cuisine généreuse qui marie tradition italienne et influences méditerranéennes, des pâtes al dente aux plats composés, pour un repas complet et satisfaisant.",
-        image: "/menuphotos/plats et pates.webp",
+        image: "https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760456002/plats_et_pates_or9mfm.png",
         loading: "lazy",
         align: "left",
     },
@@ -76,7 +76,7 @@ const menuCategories = [
         subtitle: "Gourmandises à Emporter ou sur Place",
         description:
             "Du pain frais, des garnitures généreuses et des associations savoureuses pour un repas rapide mais jamais ordinaire, entre tradition et modernité.",
-        image: "/menuphotos/sandwichs burgers et tacos.webp",
+        image: "https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760456010/sandwichs_burgers_et_tacos_cr0d1z.png",
         loading: "lazy",
         align: "right",
     },
@@ -85,7 +85,7 @@ const menuCategories = [
         subtitle: "Partage et Convivialité",
         description:
             "La fine fleur de la cuisine de partage, des pizzas à la pâte fine et croustillante aux ojjas brûlants et parfumés, pour des moments de complicité gustative.",
-        image: "/menuphotos/Pizzas et ojjas.webp",
+        image: "https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760455999/Pizzas_et_ojjas_hpzlla.png",
         loading: "lazy",
         align: "left",
     },
@@ -94,7 +94,7 @@ const menuCategories = [
         subtitle: "Fraîcheur et Équilibre",
         description:
             "Découvrez nos sandwichs signature préparés avec des ingrédients frais et savoureux, offrant un équilibre parfait entre textures et goûts. Parfaits pour un déjeuner rapide ou un repas léger.",
-        image: "/menuphotos/salades et crepes salees.webp",
+        image: "https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760456010/salades_et_crepes_salees_auamjy.png",
         loading: "lazy",
         align: "right",
     },
@@ -103,7 +103,7 @@ const menuCategories = [
         subtitle: "La Note Sucrée Parfaite",
         description:
             "Savourez nos soupes maison, préparées avec des ingrédients frais et de qualité. Chaque cuillère vous offre un moment de réconfort, parfait pour vous réchauffer et vous ressourcer.",
-        image: "/menuphotos/crepes et pancake.webp",
+        image: "https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760458748/crepes_et_pancakewebp_hooer6.png",
         loading: "lazy",
         align: "left",
     },
@@ -112,7 +112,7 @@ const menuCategories = [
         subtitle: "Ambiance et Détente",
         description:
             "Un mélange parfait de saveurs raffinées et d’ambiance chaleureuse, à partager entre amis autour d’une chicha parfumée.",
-        image: "/menuphotos/chicha.webp",
+        image: "https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760455995/chicha_wy2hl8.png",
         loading: "lazy",
         align: "right",
     },

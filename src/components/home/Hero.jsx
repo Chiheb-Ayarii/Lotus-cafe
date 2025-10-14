@@ -3,17 +3,17 @@ import "./hero.css";
 
 const slides = [
   {
-    image: "/images/hero.webp",
+    image: "https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760455919/hero_axgh9x.png",
     title: "Plats Délicieux",
     description: "Découvrez une cuisine authentique préparée avec passion et les meilleurs ingrédients."
   },
   {
-    image: "/images/hero2.webp",
+    image: "https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760455928/hero2_rhyjvl.png",
     title: "Éclat & Sérénité",
     description: "Terrasse ouverte, journée parfaite offerte."
   },
   {
-    image: "/images/hero3.webp",
+    image: "https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760455925/hero3_eizydn.png",
     title: "Calme & Saveur",
     description: "Ici on se pose, et le stress s'expose.."
   }

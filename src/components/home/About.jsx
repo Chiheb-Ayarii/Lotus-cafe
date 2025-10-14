@@ -70,13 +70,13 @@ export function AboutSection({ onNavigate }) {
             <div className="images-grid">
               <div className="images-column">
                 <img
-                  src="/lotusabout/coffee.webp"
+                  src="https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760455948/coffee_czydps.jpg"
                   alt="café"
                   className="image-large"
                   loading="lazy"
                 />
                 <img
-                  src="/lotus-terrace-view.webp"
+                  src="/https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760456581/lotus-terrace-view_etsyuy.png"
                   alt="Equipe"
                   className="image-small"
                   loading="lazy"
@@ -84,13 +84,13 @@ export function AboutSection({ onNavigate }) {
               </div>
               <div className="images-column images-column-offset">
                 <img
-                  src="/lotus-interior-night.webp"
+                  src="https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760456321/lotus-interior-night_f30zir.png"
                   alt="Intérieur du café"
                   className="image-small"
                   loading="lazy"
                 />
                 <img
-                  src="/lotusabout/food.webp"
+                  src="https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760455949/food_ntoqci.jpg"
                   alt="Nourriture"
                   className="image-large"
                   loading="lazy"
@@ -115,7 +115,7 @@ const specialties = [
     title: "Lotus Rose Breakfast",
     category: "Breakfast",
     description: "Signature breakfast with tartines, scrambled eggs, 3 mini Nutella pancakes, and French toast with honey - the ultimate Lotus morning experience.",
-    image: "/images/lotuserosebreakfast.webp",
+    image: "https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760455912/lotuserosebreakfast_o8ttzp.png",
     price: "18.5 DT",
     featured: true
   },
@@ -124,7 +124,7 @@ const specialties = [
     title: "Le Fameux Royale",
     category: "Breakfast",
     description: "Premium breakfast for two with omelets, charcuterie, 6 mini cheese tartines with salmon and bacon, and choice of mini pancakes.",
-    image: "/images/fameuxroyale.webp",
+    image: "https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760455905/fameuxroyale_puhwxc.png",
     price: "32.00 DT",
     featured: true
   },
@@ -133,7 +133,7 @@ const specialties = [
     title: "Fast Gourmand",
     category: "Breakfast",
     description: "Perfect balanced breakfast with coffee, juice, water, pastry and a hearty omelette - excellent value and satisfaction.",
-    image: "/images/fastgourmand.webp",
+    image: "https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760455904/fastgourmand_xpbbja.png",
     price: "12.75 DT",
     featured: false
   },
@@ -142,7 +142,7 @@ const specialties = [
     title: "Le Brunch Lotus",
     category: "Brunch",
     description: "Ultimate weekend brunch for two featuring pastries, cakes, mini desserts, pancakes, charcuterie, and savory brochettes - our signature sharing experience.",
-    image: "/images/lebrunchlotus.webp",
+    image: "https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760455906/lebrunchlotus_ronkes.png",
     price: "45 DT",
     featured: true
   },
@@ -151,7 +151,7 @@ const specialties = [
     title: "Crêpe Lotus",
     category: "Crepes/Waffles",
     description: "Our signature dessert crepe with premium Lotus spread - the most indulgent and unique sweet creation on our menu.",
-    image: "images/crepelotus.webp",
+    image: "https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760455885/crepelotus_ryg7qp.jpg",
     price: "23 DT",
     featured: true
   },
@@ -160,7 +160,7 @@ const specialties = [
     title: "Pancakes Lotus",
     category: "Crepes/Waffles",
     description: "Fluffy pancakes featuring our exclusive Lotus spread - a breakfast dessert masterpiece that defines our brand.",
-    image: "/images/Pancakelotus.webp",
+    image: "/https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760455906/Pancakelotus_dza6cj.jpg",
     price: "17 DT",
     featured: true
   },
@@ -169,7 +169,7 @@ const specialties = [
     title: "Crêpe Nutella Banane Noisette",
     category: "Crepes/Waffles",
     description: "Classic crowd-pleaser with Nutella, fresh banana, and crunchy hazelnuts - perfectly executed every time.",
-    image: "images/crepenutella.webp",
+    image: "https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760455886/crepenutella_zsulme.webp",
     price: "16 DT",
     featured: false
   },
@@ -178,7 +178,7 @@ const specialties = [
     title: "Thé Royal LOTUS",
     category: "Drinks",
     description: "Exclusive premium tea blend crafted specifically for Café Lotus - a unique and sophisticated beverage experience.",
-    image: "/images/theroyallotus.webp",
+    image: "https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760455911/theroyalelotus_iijq5q.png",
     price: "12 DT",
     featured: true
   },
@@ -187,7 +187,7 @@ const specialties = [
     title: "Blue Lemon Citronnade",
     category: "Drinks",
     description: "Stunning visual masterpiece with fresh lemonade and blue curacao syrup - as beautiful as it is refreshing.",
-    image: "/images/bluelemon.webp",
+    image: "https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760455888/bluelemon_apveeu.png",
     price: "9 DT",
     featured: true
   },
@@ -196,7 +196,7 @@ const specialties = [
     title: "Power Detox",
     category: "Drinks",
     description: "Healthy energizing blend of apple, pineapple and cinnamon - the perfect wellness-oriented choice for health-conscious guests.",
-    image: "/images/powerdetox.webp",
+    image: "https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760455912/powerdetox_l2kwmt.png",
     price: "12 DT",
     featured: false
   }
@@ -316,42 +316,42 @@ const testimonials = [
     name: "Sarah Chen",
     rating: 5,
     text: "Déjeuner parfait ! Nourriture délicieuse et accueil chaleureux. Je recommande vivement !",
-    image: "/images/customer5.webp"
+    image: "https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760455896/customer5_rj2r4y.png"
   },
   {
     id: 2,
     name: "Samar Ben haj ali",
     rating: 5,
     text: "Un repas délicieux et un personnel aux petits soins. À ne pas manquer !",
-    image: "/images/customer2.webp"
+    image: "https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760455894/customer2_rxx3ht.png"
   },
   {
     id: 3,
     name: "Ameur ZAMMOURI",
     rating: 4,
     text: "Nourriture savoureuse, service impeccable. Je reviendrai sans hésiter !",
-    image: "/images/customer.webp"
+    image: "https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760455888/customer_nxbn4a.png"
   },
   {
     id: 4,
     name: "Helmi Chihaoui",
     rating: 5,
     text: "Espace cosy et lumineux, idéal pour les sessions de révision.",
-    image: "/images/customer3.webp"
+    image: "https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760455894/customer3_kboqb2.png"
   },
   {
     id: 5,
     name: "Mohamed Amine",
     rating: 5,
     text: "Un intérieur apaisant où l’inspiration vient naturellement.",
-    image: "/images/customer4.webp"
+    image: "https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760455895/customer4_psr83g.png"
   },
   {
     id: 6,
     name: "Wissem Sahli",
     rating: 4,
     text: "L’endroit parfait pour respirer, réfléchir et savourer un bon café.",
-    image: "/images/customer5.webp"
+    image: "https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760455897/customer6_a6cwza.png"
   }
 ]
 

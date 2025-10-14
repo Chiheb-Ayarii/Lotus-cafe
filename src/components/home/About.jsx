@@ -76,7 +76,7 @@ export function AboutSection({ onNavigate }) {
                   loading="lazy"
                 />
                 <img
-                  src="/https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760456581/lotus-terrace-view_etsyuy.png"
+                  src="https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760456581/lotus-terrace-view_etsyuy.png"
                   alt="Equipe"
                   className="image-small"
                   loading="lazy"
@@ -160,7 +160,7 @@ const specialties = [
     title: "Pancakes Lotus",
     category: "Crepes/Waffles",
     description: "Fluffy pancakes featuring our exclusive Lotus spread - a breakfast dessert masterpiece that defines our brand.",
-    image: "/https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760455906/Pancakelotus_dza6cj.jpg",
+    image: "https://res.cloudinary.com/dxoxd6inf/image/upload/v1760455906/Pancakelotus_dza6cj.jpg",
     price: "17 DT",
     featured: true
   },
@@ -169,7 +169,7 @@ const specialties = [
     title: "Crêpe Nutella Banane Noisette",
     category: "Crepes/Waffles",
     description: "Classic crowd-pleaser with Nutella, fresh banana, and crunchy hazelnuts - perfectly executed every time.",
-    image: "https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760455886/crepenutella_zsulme.webp",
+    image: "https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/f_webp,q_auto,w_600/v1760455886/crepenutella_zsulme.webp",
     price: "16 DT",
     featured: false
   },

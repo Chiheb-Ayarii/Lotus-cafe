@@ -107,15 +107,6 @@ const menuCategories = [
         loading: "lazy",
         align: "left",
     },
-    {
-        title: "CHICHAS ",
-        subtitle: "Ambiance et Détente",
-        description:
-            "Un mélange parfait de saveurs raffinées et d’ambiance chaleureuse, à partager entre amis autour d’une chicha parfumée.",
-        image: "https://res.cloudinary.com/dxoxd6inf/image/upload/f_webp,q_auto,w_600/v1760455995/chicha_wy2hl8.png",
-        loading: "lazy",
-        align: "right",
-    },
 ]
 
   return (

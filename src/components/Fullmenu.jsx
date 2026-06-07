@@ -1114,62 +1114,6 @@ export default function LotusCafeMenuPage() {
                 </div>
               </div>
             </section>
-
-            <section className={styles.lotusMenuSection}>
-              <h2 className={styles.lotusSectionTitle}>Chichas</h2>
-              <div className={styles.lotusMenuItems}>
-                <div className={styles.lotusMenuItem}>
-                  <div className={styles.lotusItemInfo}>
-                    <h3 className={styles.lotusItemName}>Chicha</h3>
-                    <p className={styles.lotusItemDescription}>Pomme, menthe, fraise, melon</p>
-                  </div>
-                  <span className={styles.lotusItemPrice}>
-                    13<sup>DT</sup>
-                  </span>
-                </div>
-                <div className={styles.lotusMenuItem}>
-                  <div className={styles.lotusItemInfo}>
-                    <h3 className={styles.lotusItemName}>Chicha raisin menthe</h3>
-                  </div>
-                  <span className={styles.lotusItemPrice}>
-                    15<sup>DT</sup>
-                  </span>
-                </div>
-                <div className={styles.lotusMenuItem}>
-                  <div className={styles.lotusItemInfo}>
-                    <h3 className={styles.lotusItemName}>Chicha cheikh money</h3>
-                  </div>
-                  <span className={styles.lotusItemPrice}>
-                    15<sup>DT</sup>
-                  </span>
-                </div>
-                <div className={styles.lotusMenuItem}>
-                  <div className={styles.lotusItemInfo}>
-                    <h3 className={styles.lotusItemName}>Chicha love</h3>
-                  </div>
-                  <span className={styles.lotusItemPrice}>
-                    15<sup>DT</sup>
-                  </span>
-                </div>
-                <div className={styles.lotusMenuItem}>
-                  <div className={styles.lotusItemInfo}>
-                    <h3 className={styles.lotusItemName}>Supplément chicha glacé</h3>
-                  </div>
-                  <span className={styles.lotusItemPrice}>
-                    2<sup>DT</sup>
-                  </span>
-                </div>
-                <div className={styles.lotusMenuItem}>
-                  <div className={styles.lotusItemInfo}>
-                    <h3 className={styles.lotusItemName}>Formule chicha</h3>
-                    <p className={styles.lotusItemDescription}>Chicha, thé à la menthe, eau 0.5l</p>
-                  </div>
-                  <span className={styles.lotusItemPrice}>
-                    18<sup>DT</sup>
-                  </span>
-                </div>
-              </div>
-            </section>
           </div>
         </main>
       </div>
